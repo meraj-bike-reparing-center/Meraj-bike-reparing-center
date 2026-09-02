@@ -40,6 +40,19 @@
             padding: 0 20px;
         }
 
+        /* Instagram Milestone Banner */
+        .insta-banner {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
         .action-buttons {
             display: grid;
             grid-template-columns: 1fr;
@@ -49,16 +62,16 @@
 
         @media (min-width: 768px) {
             .action-buttons {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
-        .btn-call, .btn-whatsapp, .btn-map {
+        .btn-call, .btn-whatsapp, .btn-insta, .btn-map {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 16px;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 8px;
@@ -69,9 +82,10 @@
         }
         .btn-call { background-color: #25d366; }
         .btn-whatsapp { background-color: #128c7e; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743); }
         .btn-map { background-color: #ff4757; }
 
-        .btn-call:hover, .btn-whatsapp:hover, .btn-map:hover {
+        .btn-call:hover, .btn-whatsapp:hover, .btn-insta:hover, .btn-map:hover {
             opacity: 0.9;
             transform: translateY(-2px);
         }
@@ -230,14 +244,23 @@
 
     <div class="page-wrapper">
         
+        <!-- Instagram Milestone Highlight -->
+        <div class="insta-banner">
+            🔥 6.5M+ Views in Last 30 Days | Instagram: @meraj_bike_mechanic
+        </div>
+
+        <!-- Top Action Buttons Grid -->
         <div class="action-buttons">
-            <a href="tel:8130585587" class="btn-call">📞 डायरेक्ट कॉल करें</a>
+            <a href="tel:8130585587" class="btn-call">📞 तुरंत बात करें</a>
             <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20अपनी%20बाइक%20की%20सर्विस/रिपेयरिंग%20करवानी%20है।" target="_blank" class="btn-whatsapp">💬 WhatsApp चैट</a>
+            <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="btn-insta">📸 Instagram फॉलो करें</a>
             <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map">📍 गूगल मैप रास्ता</a>
         </div>
 
+        <!-- Content Grid for Desktop & Mobile -->
         <div class="content-grid">
 
+            <!-- Emergency Breakdown Section -->
             <div class="card full-width" style="border-left: 5px solid #ff0055; background: linear-gradient(145deg, #1e1e1e, #261518);">
                 <h2 style="color: #ff3366; border-bottom: 2px solid #3a1c24;">🚨 इमरजेंसी / सड़क पर गाड़ी फंसने पर (Roadside Help)</h2>
                 <p style="font-size: 16px; margin-bottom: 15px; color: #f1f1f1;">
@@ -257,6 +280,7 @@
                 </div>
             </div>
 
+            <!-- Special Offer Section -->
             <div class="card">
                 <h2>💡 स्पेशल ऑफर</h2>
                 <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="Bike Repairing" class="offer-img">
@@ -264,6 +288,7 @@
                 <p style="margin-top: 12px; color: #25d366; font-weight: bold;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
             </div>
 
+            <!-- Services Section -->
             <div class="card">
                 <h2>🛠️ हमारी मुख्य सेवाएँ</h2>
                 <ul class="service-list">
@@ -274,6 +299,7 @@
                 </ul>
             </div>
 
+            <!-- Professional Booking Form -->
             <div class="card full-width">
                 <h2>📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h2>
                 <p style="font-size: 14px; color: #aaa; margin-bottom: 20px;">अपनी डिटेल्स भरकर सीधे WhatsApp पर बुकिंग भेजें:</p>
@@ -319,6 +345,7 @@
                 </form>
             </div>
 
+            <!-- Location Banner -->
             <div class="location-banner full-width">
                 <h2>📍 दुकान की सटीक लाइव लोकेशन</h2>
                 <p style="font-size: 15px; color: #ccc; margin-top: 5px;">बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
@@ -327,6 +354,7 @@
                 </a>
             </div>
 
+            <!-- Address Box -->
             <div class="address-box full-width">
                 <h3>📍 वर्कशॉप का पता (Workshop Address)</h3>
                 <p style="font-size: 18px;"><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान</strong><br>जिला: समस्तीपुर, बिहार - 848124</p>
@@ -351,7 +379,7 @@
             let service = document.getElementById('service-choice').value;
             let msg = document.getElementById('message').value;
             
-            let whatsappNumber = "918130585587"; // आपका WhatsApp नंबर
+            let whatsappNumber = "918130585587";
             
             let text = `नमस्कार, मुझे अपनी बाइक की सर्विस करवानी है।\n\n*नाम:* ${name}\n*मोबाइल:* ${phone}\n*गाड़ी:* ${bike}\n*चुनी गई समस्या/काम:* ${service}\n*अन्य विवरण:* ${msg}`;
             
@@ -363,5 +391,5 @@
     </script>
 
 </body>
-    </html>
+                        </html>
     
