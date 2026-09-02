@@ -97,7 +97,9 @@
             color: #ff6b81;
             font-weight: bold;
         }
-        .form-group input, .form-group textarea {
+        .form-group input[type="text"], 
+        .form-group input[type="tel"], 
+        .form-group textarea {
             width: 100%;
             padding: 12px;
             background-color: #2c2c2c;
@@ -106,20 +108,44 @@
             border-radius: 6px;
             font-size: 16px;
         }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .checkbox-label {
+            background-color: #2c2c2c;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #444;
+        }
+        .checkbox-label input {
+            accent-color: #ff4757;
+            width: 18px;
+            height: 18px;
+        }
         .btn-submit {
-            background-color: #ff4757;
+            background-color: #25d366;
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 14px 20px;
             font-size: 16px;
             font-weight: bold;
             width: 100%;
             border-radius: 6px;
             cursor: pointer;
             transition: 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         .btn-submit:hover {
-            background-color: #e84118;
+            background-color: #20ba5a;
         }
         .address-box {
             background-color: #1e1e1e;
@@ -151,22 +177,18 @@
 
     <div class="container">
         
-        <!-- Call Button -->
         <a href="tel:8130585587" class="btn-call">📞 कॉल करें: 8130585587</a>
 
-        <!-- Google Map Direct Link Button -->
-        <a href="https://maps.app.goo.gl/TBm9derXNJBYNd116" target="_blank" class="btn-map">
+        <a href="https://maps.app.goo.gl/T8m9derXNJBYNd116" target="_blank" class="btn-map">
             📍 गूगल मैप पर दुकान का रास्ता देखें (Click Here)
         </a>
 
-        <!-- Special Offer Section -->
         <div class="card">
             <h2>💡 स्पेशल ऑफर</h2>
             <p><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ!)।</p>
             <p style="margin-top: 10px; color: #25d366;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
         </div>
 
-        <!-- Services Section -->
         <div class="card">
             <h2>🛠️ हमारी मुख्य सेवाएँ</h2>
             <ul class="service-list">
@@ -177,27 +199,45 @@
             </ul>
         </div>
 
-        <!-- Booking / Inquiry Form Section -->
         <div class="card">
-            <h2>📝 सर्विस के लिए बुकिंग या पूछताछ करें</h2>
-            <form action="#" method="POST">
+            <h2>📝 WhatsApp पर सर्विस बुकिंग करें</h2>
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                 <div class="form-group">
                     <label for="name">आपका नाम:</label>
-                    <input type="text" id="name" name="name" placeholder="अपना नाम लिखें" required>
+                    <input type="text" id="name" placeholder="अपना पूरा नाम लिखें" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="phone">मोबाइल नंबर:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="अपना फोन नंबर लिखें" required>
+                    <input type="tel" id="phone" placeholder="अपना फोन नंबर लिखें" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="message">समस्या या सर्विस का विवरण:</label>
-                    <textarea id="message" name="message" rows="4" placeholder="गाड़ी में क्या दिक्कत है या कौन सी सर्विस करवानी है..." required></textarea>
+                    <label for="bike-model">गाड़ी का नाम (Bike Model):</label>
+                    <input type="text" id="bike-model" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
                 </div>
-                <button type="submit" class="btn-submit">भेजें (Submit)</button>
+
+                <div class="form-group">
+                    <label>क्या काम करवाना है / क्या समस्या है? (विकल्प चुनें):</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label"><input type="checkbox" name="service" value="जनरल सर्विस"> जनरल सर्विस</label>
+                        <label class="checkbox-label"><input type="checkbox" name="service" value="इंजन का काम"> इंजन का काम</label>
+                        <label class="checkbox-label"><input type="checkbox" name="service" value="वायरिंग समस्या"> वायरिंग समस्या</label>
+                        <label class="checkbox-label"><input type="checkbox" name="service" value="इंजन ऑयल"> इंजन ऑयल बदलना</label>
+                        <label class="checkbox-label"><input type="checkbox" name="service" value="ब्रेक/टायर"> ब्रेक या टायर काम</label>
+                        <label class="checkbox-label"><input type="checkbox" name="service" value="LED बल्ब"> CYT एलईडी बल्ब</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">अन्य कोई खास दिक्कत (Details):</label>
+                    <textarea id="message" rows="3" placeholder="गाड़ी में और क्या दिक्कत आ रही है, यहाँ विस्तार से लिखें..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">💬 WhatsApp पर बुकिंग भेजें</button>
             </form>
         </div>
 
-        <!-- Address Box -->
         <div class="address-box">
             <h3>📍 वर्कशॉप का पता (Workshop Address)</h3>
             <p>सरायगंज रोड, परोरिया झरुल्ला स्थान<br>जिला: समस्तीपुर, बिहार - 848124</p>
@@ -207,9 +247,37 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
+        <p>© 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
     </footer>
 
-</body>
-</html>
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+            let bike = document.getElementById('bike-model').value;
+            let msg = document.getElementById('message').value;
+            
+            let checkboxes = document.querySelectorAll('input[name="service"]:checked');
+            let selectedServices = [];
+            checkboxes.forEach((cb) => {
+                selectedServices.push(cb.value);
+            });
+            
+            let serviceText = selectedServices.length > 0 ? selectedServices.join(', ') : 'कोई खास सर्विस नहीं चुनी';
+            
+            let whatsappNumber = "918130585587"; // आपका WhatsApp नंबर
+            
+            let text = `नमस्कार, मुझे अपनी बाइक की सर्विस करवानी है।\n\n*नाम:* ${name}\n*मोबाइल:* ${phone}\n*गाड़ी:* ${bike}\n*चयनित काम:* ${serviceText}\n*अन्य विवरण:* ${msg}`;
+            
+            let encodedText = encodeURIComponent(text);
+            let whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 
+</body>
+    </html>
+    
