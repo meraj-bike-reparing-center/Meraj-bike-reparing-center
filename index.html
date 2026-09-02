@@ -158,15 +158,11 @@
                 let bike = document.getElementById('bikeModel').value;
                 let work = document.getElementById('workType').value;
                 let details = document.getElementById('custDetails').value;
+                if (!details) { details = "लागू नहीं"; }
 
-                let msg = "🛠️ नई सर्विस बुकिंग\n\n" +
-                          "👤 नाम: " + name + "\n" +
-                          "📞 मोबाइल: " + phone + "\n" +
-                          "🏍️ गाड़ी: " + bike + "\n" +
-                          "🔧 काम: " + work + "\n" +
-                          "📝 विवरण: " + (details ? details : "कुछ नहीं");
+                let msg = "नई सर्विस बुकिंग\n\nनाम: " + name + "\nमोबाइल: " + phone + "\nगाड़ी: " + bike + "\nकाम: " + work + "\nविवरण: " + details;
 
-                let url = "https://wa.me/918130585587?text=" + encodeURI(msg);
+                let url = "https://api.whatsapp.com/send?phone=918130585587&text=" + encodeURIComponent(msg);
                 window.open(url, '_blank');
             }
         </script>
