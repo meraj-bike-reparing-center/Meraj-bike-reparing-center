@@ -73,6 +73,49 @@
             padding: 0 15px;
         }
 
+        /* Professional Instagram & Views Banner */
+        .insta-banner {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .insta-banner h4 {
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .insta-banner p {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .insta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            color: #dc2743;
+            padding: 9px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .insta-btn:hover {
+            transform: scale(1.05);
+        }
+
         .emergency-box {
             background: rgba(230, 57, 70, 0.15);
             border: 1px solid var(--primary-red);
@@ -273,7 +316,7 @@
             color: var(--text-muted);
         }
 
-        /* Desktop Optimization (Larger screens) */
+        /* Desktop Optimization */
         @media (min-width: 768px) {
             .container {
                 max-width: 750px;
@@ -298,6 +341,15 @@
     </header>
 
     <div class="container">
+
+        <!-- Professional Instagram & Views Banner -->
+        <div class="insta-banner">
+            <h4>🔥 6.5M+ Views in Last 30 Days (3.5K+ Followers)</h4>
+            <p>हमारे टेक्निकल बाइक रिपेयरिंग और रील्स को इंस्टाग्राम पर लाखों लोगों का प्यार मिला है!<br>एक अकेले वीडियो पर <strong>4.5 Million+ Views</strong> हैं।</p>
+            <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="insta-btn">
+                <i class="fa-brands fa-instagram"></i> Instagram पर जुड़ें (@meraj_bike_mechanic)
+            </a>
+        </div>
 
         <!-- Emergency Help Box -->
         <div class="emergency-box">
@@ -399,7 +451,6 @@
             
             let phoneNumber = "918130585587"; 
             
-            // अब यह मैसेज पूरी तरह साफ़ और सुंदर हिंदी में WhatsApp पर जाएगा
             let message = `🛠️ *नया सर्विस बुकिंग अनुरोध - Meraj Bike Repairing Centre*%0a` +
                           `----------------------------------------%0a` +
                           `👤 *ग्राहक का नाम:* ${name}%0a` +
@@ -417,4 +468,4 @@
 
 </body>
     </html>
-                
+                               
