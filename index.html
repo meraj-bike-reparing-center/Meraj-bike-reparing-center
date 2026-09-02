@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraj Bike Repairing Centre</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #121212; color: #e0e0e0; line-height: 1.5; padding: 10px; }
+        .container { max-width: 600px; margin: 0 auto; background: #1e1e1e; padding: 15px; border-radius: 8px; }
+        .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
+        .header h1 { color: #ff4d4d; font-size: 22px; margin-bottom: 5px; }
+        .header p { color: #b0b0b0; font-size: 13px; }
+        .info-bar { background: #2a2a2a; padding: 8px; font-size: 12px; text-align: center; border-radius: 4px; margin-bottom: 15px; color: #ddd; }
+        
+        /* Updated Banner Style */
+        .banner { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px; }
+        .banner h2 { font-size: 18px; margin-bottom: 5px; }
+        .banner p { font-size: 13px; margin-bottom: 10px; opacity: 0.95; }
+        .banner a { display: inline-block; background: white; color: #dc2743; padding: 6px 12px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 12px; }
 
+        .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 12px; border-radius: 6px; margin-bottom: 15px; text-align: center; }
+        .emergency-box h3 { color: #ff4d4d; font-size: 14px; margin-bottom: 8px; }
+        .btn-call, .btn-whatsapp { display: block; width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 13px; text-align: center; }
+        .btn-call { background: #d32f2f; color: white; }
+        .btn-whatsapp { background: #388e3c; color: white; }
+
+        .grid-boxes { display: flex; gap: 10px; margin-bottom: 15px; }
+        .grid-box { flex: 1; background: #2a2415; border: 1px solid #ffc107; padding: 10px; border-radius: 6px; font-size: 11px; }
+        .grid-box h3 { color: #ffc107; font-size: 12px; margin-bottom: 6px; }
+        .grid-box.green { background: #152a1a; border-color: #4caf50; }
+        .grid-box.green h3 { color: #4caf50; }
+        .grid-box ul { padding-left: 12px; }
+        .grid-box li { margin-bottom: 4px; }
+
+        .offer-box { background: #1a262c; border: 1px solid #00bcd4; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
+        .offer-box h3 { color: #00bcd4; font-size: 14px; margin-bottom: 8px; }
+        .offer-box img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px; }
+        .offer-box p { font-size: 12px; margin-bottom: 6px; }
+
+        .services-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; font-size: 12px; }
+        .services-box h3 { color: #ff9800; font-size: 14px; margin-bottom: 8px; }
+        .services-box ul { padding-left: 15px; }
+        .services-box li { margin-bottom: 5px; }
+
+        .reviews-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; font-size: 12px; }
+        .reviews-box h3 { color: #e91e63; font-size: 14px; margin-bottom: 8px; }
+        .review-item { background: #2a2a2a; padding: 8px; border-radius: 4px; margin-bottom: 8px; font-style: italic; }
+        .review-item span { display: block; font-style: normal; font-weight: bold; margin-top: 4px; color: #aaa; font-size: 11px; }
+
+        .booking-box { background: #1a2332; border: 1px solid #2196f3; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
+        .booking-box h3 { color: #2196f3; font-size: 14px; margin-bottom: 8px; }
+        .booking-form input, .booking-form select, .booking-form textarea { width: 100%; padding: 8px; margin-bottom: 8px; background: #222; border: 1px solid #444; color: white; border-radius: 4px; font-size: 12px; }
+        .booking-form button { width: 100%; padding: 9px; background: #2196f3; color: white; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 13px; }
+
+        .footer-grid { display: flex; gap: 10px; margin-bottom: 10px; }
+        .footer-box { flex: 1; background: #222; border: 1px solid #444; padding: 10px; border-radius: 6px; font-size: 11px; text-align: center; }
+        .footer-box h3 { color: #ff4d4d; font-size: 12px; margin-bottom: 6px; }
+        .footer-box.blue h3 { color: #2196f3; }
+        .map-btn { display: inline-block; background: #2196f3; color: white; padding: 6px 10px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 5px; font-size: 11px; }
+        .copyright { text-align: center; font-size: 10px; color: #777; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MERAJ BIKE REPAIRING CENTRE</h1>
+            <p>⚙️ Expert Engine & Technical Repair Services</p>
+        </div>
+
+        <div class="info-bar">
+            🕒 सुबह 7 से शाम 7 (सातों दिन खुली)  |  📍 सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114
+        </div>
+
+        <div class="banner">
+            <h2>🔥 7.6M+ Views in Last 30 Days</h2>
+            <p>हमारे टेक्निकल रील्स और रिपेयरिंग वीडियोज़ को इंस्टाग्राम पर भारी सफलता मिली है। (एक अकेली वीडियो पर 4.5M+ Views)</p>
+            <a href="https://instagram.com/meraj_bike_mechanic" target="_blank">📷 Instagram पर जुड़ें (@meraj_bike_mechanic)</a>
+        </div>
+
+        <div class="emergency-box">
+            <h3>⚠️ तुरंत क्या करें?</h3>
+            <p style="font-size: 11px; margin-bottom: 8px; color: #ccc;">अपनी बाइक लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
+            <a href="tel:8130585507" class="btn-call">📞 इमरजेंसी कॉल: 8130585507</a>
+            <a href="https://wa.me/918130585507?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">🟢 WhatsApp पर लोकेशन भेजें</a>
+        </div>
+
+        <div class="grid-boxes">
+            <div class="grid-box">
+                <h3>⚠️ इंजन काम के विशेष नियम</h3>
+                <ul>
+                    <li><strong>शुरुआती 500 KM:</strong> गाड़ी हमेशा सिंगल सवारी चलाएं और ज्यादा रेस न दें।</li>
+                    <li><strong>मोबिल बदलाव:</strong> ठीक 500 KM पर दुकान पर आकर इंजन ओइल बदलवाना अनिवार्य है।</li>
+                    <li>नियम न मानने पर धुआं देने या इंजन सीज होने पर जिम्मेदारी दुकान की नहीं होगी।</li>
+                </ul>
+            </div>
+            <div class="grid-box green">
+                <h3>🟢 ओरिजिनल पार्ट्स एवं फिटिंग नियम</h3>
+                <ul>
+                    <li>हम Hero और अन्य कंपनियों के 100% ओरिजिनल पार्ट्स उपलब्ध कराते हैं। होलसेलर से अतिरिक्त सामान पर मात्र 10% कमीशन मिलता है।</li>
+                    <li>ओरिजिनल पार्ट्स लगवाने पर एमआरपी (MRP) मूल्य से ₹100 से ₹150 एक्स्ट्रा फिटिंग/लेबर चार्ज लिया जाएगा।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="offer-box">
+            <h3>💡 स्पेशल ऑफर</h3>
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Bike Offer">
+            <p><strong>CYT LED High Quality Bulb:</strong> बाहर ₹500, यहाँ मात्र ₹350 में (फिटिंग के साथ)।</p>
+            <p style="color: #4caf50; font-weight: bold; font-size: 11px;">✔ तेज रोशनी | ✔ तुरंत दुकान पर फिटिंग</p>
+        </div>
+
+        <div class="services-box">
+            <h3>🛠️ हमारी मुख्य सेवाएँ</h3>
+            <ul>
+                <li>क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</li>
+                <li>इंजन रिपेयरिंग और मेंटेंनेस</li>
+                <li>वायरिंग और इलेक्ट्रिकल काम</li>
+                <li>टायर और ब्रेक सर्विस</li>
+            </ul>
+        </div>
+
+        <div class="reviews-box">
+            ### ⭐ ग्राहकों के अनुभव
+            <div class="review-item">
+                "मेरज भाई ने मेरी पल्सर का इंजन ऐसा बना दिया कि मजा आ गया! काम एकदम पक्का।"
+                <span>— राहुल कुमार (सरायरंजन)</span>
+            </div>
+            <div class="review-item">
+                "अचानक रास्ते में बाइक बंद होने पर भाई ने WhatsApp लोकेशन पर तुरंत मदद की।"
+                <span>— अमित सिंह</span>
+            </div>
+        </div>
+
+        <div class="booking-box">
+            <h3>📅 ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
+            <form class="booking-form" onsubmit="event.preventDefault(); alert('बुकिंग भेज दी गई है!');">
+                <input type="text" placeholder="आपका नाम (नाम पूरा लिखें)" required>
+                <input type="tel" placeholder="मोबाइल नंबर (फोन नंबर लिखें)" required>
+                <input type="text" placeholder="गाड़ी का नाम (Bike Model: जैसे Splendor, Pulsar)" required>
+                <select required>
+                    <option value="">-- समस्या / काम चुनें --</option>
+                    <option value="service">सर्विसिंग</option>
+                    <option value="engine">इंजन काम</option>
+                    <option value="other">अन्य समस्या</option>
+                </select>
+                <textarea rows="2" placeholder="अन्य विवरण (यदि कुछ और बताना हो)..."></textarea>
+                <button type="submit">🟢 WhatsApp पर बुकिंग भेजें</button>
+            </form>
+        </div>
+
+        <div class="footer-grid">
+            <div class="footer-box blue">
+                <h3>📍 दुकान की लाइव लोकेशन</h3>
+                <p style="font-size: 10px; color: #aaa;">सीधे दुकान पर पहुँचने के लिए क्लिक करें:</p>
+                <a href="https://maps.google.com" target="_blank" class="map-btn">🗺️ Google Maps पर नेविगेट करें</a>
+            </div>
+            <div class="footer-box">
+                <h3>📌 वर्कशॉप का पता</h3>
+                <p style="font-size: 10px; color: #ccc;">सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114<br>सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Meraj Bike Repairing Centre, All Rights Reserved.
+        </div>
+    </div>
+</body>
+</html>
