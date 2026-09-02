@@ -65,8 +65,33 @@
             color: #fff;
             margin-bottom: 10px;
         }
+        .offer-card {
+            background: linear-gradient(135deg, #2c1a00, #1e1e1e);
+            border-left: 5px solid #ffcc00;
+            text-align: center;
+        }
+        .offer-card img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #ffcc00;
+        }
+        .price-tag {
+            font-size: 1.5rem;
+            color: #25d366;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.1rem;
+            margin-right: 10px;
+        }
         .services-list {
             list-style: none;
+            text-align: left;
         }
         .services-list li {
             padding: 8px 0;
@@ -77,6 +102,7 @@
         }
         .contact-info p {
             margin-bottom: 8px;
+            text-align: left;
         }
         footer {
             text-align: center;
@@ -101,14 +127,25 @@
         
         <a href="tel:8130585587" class="btn-call">📞 कॉल करें: 8130585587</a>
 
+        <div class="card offer-card">
+            <img src="IMG20260902085309.jpg" alt="CYT LED Bulb">
+            
+            <h2 style="text-align: left;">💡 स्पेशल ऑफर: CYT LED High Quality Bulb</h2>
+            <p style="text-align: left;">गाड़ियों के लिए बेस्ट <strong>CYT (Chuangyate Lighting) LED Bulb</strong> अब उपलब्ध है। जो मार्केट में लोग 500 रुपये में बेचते हैं, वह हमारी दुकान पर...</p>
+            <div class="price-tag" style="text-align: left;">
+                <span class="old-price">₹500 बाहर</span> मात्र ₹350 (फिटिंग के साथ!)
+            </div>
+            <p style="text-align: left;">✅ तेज और दमदार रोशनी<br>✅ तुरंत दुकान पर आकर फिटिंग करवाएं</p>
+        </div>
+
         <div class="card">
             <h2>🛠️ हमारी सेवाएँ</h2>
             <ul class="services-list">
+                <li>✅ CYT LED बल्ब बिक्री और फिटिंग (मात्र ₹350)</li>
                 <li>✅ बाइक इंजन रिपेयरिंग और ओवरहालिंग</li>
                 <li>✅ जनरल सर्विसिंग और वाशिंग</li>
                 <li>✅ ब्रेक, क्लच और केबल रिपेयर</li>
                 <li>✅ वायरिंग और इलेक्ट्रिकल वर्क</li>
-                <li>✅ इमरजेंसी रोडसाइड असिस्टेंस (Roadside Assistance)</li>
             </ul>
         </div>
 
@@ -117,7 +154,6 @@
             <p><strong>दुकानदार:</strong> Meraj Bike Mechanic</p>
             <p><strong>पता:</strong> सरायरंजन रोड, झरउल्ला स्थान, समस्तीपुर (848114)</p>
             <p><strong>मोबाइल नंबर:</strong> <a href="tel:8130585587">8130585587</a></p>
-            <p><strong>इन्स्टाग्राम:</strong> <a href="https://instagram.com/merajbikemechanic" target="_blank">@merajbikemechanic</a></p>
         </div>
 
     </div>
@@ -128,4 +164,3 @@
 
 </body>
 </html>
-
