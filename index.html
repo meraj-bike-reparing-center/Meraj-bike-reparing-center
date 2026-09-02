@@ -159,7 +159,6 @@
                 let work = document.getElementById('workType').value;
                 let details = document.getElementById('custDetails').value;
 
-                // Clean and Simple WhatsApp Format
                 let msg = "🛠️ नई सर्विस बुकिंग\n\n" +
                           "👤 नाम: " + name + "\n" +
                           "📞 मोबाइल: " + phone + "\n" +
@@ -167,7 +166,7 @@
                           "🔧 काम: " + work + "\n" +
                           "📝 विवरण: " + (details ? details : "कुछ नहीं");
 
-                let url = "https://wa.me/918130585587?text=" + encodeURIComponent(msg);
+                let url = "https://wa.me/918130585587?text=" + encodeURI(msg);
                 window.open(url, '_blank');
             }
         </script>
