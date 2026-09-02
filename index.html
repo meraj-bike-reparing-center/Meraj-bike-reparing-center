@@ -150,6 +150,32 @@
         .btn-submit:hover {
             background-color: #20ba5a;
         }
+        .location-banner {
+            background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
+            border: 2px dashed #25d366;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .location-banner h2 {
+            color: #25d366;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .btn-map-direct {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
         .address-box {
             background-color: #1e1e1e;
             border-radius: 10px;
@@ -188,7 +214,7 @@
             💬 WhatsApp पर डायरेक्ट चैट करें
         </a>
 
-        <!-- Google Map Button with NEW Correct Link -->
+        <!-- Google Map Button -->
         <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map">
             📍 गूगल मैप पर दुकान का रास्ता देखें
         </a>
@@ -256,7 +282,16 @@
             </form>
         </div>
 
-        <!-- Address Box with exact user location -->
+        <!-- Direct GPS Location Banner -->
+        <div class="location-banner">
+            <h2>📍 दुकान की सटीक लाइव लोकेशन</h2>
+            <p style="font-size: 14px; color: #ccc; margin-top: 5px;">बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
+            <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map-direct">
+                🗺️ Google Maps पर नेविगेट करें
+            </a>
+        </div>
+
+        <!-- Address Box -->
         <div class="address-box">
             <h3>📍 वर्कशॉप का पता (Workshop Address)</h3>
             <p><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान</strong><br>जिला: समस्तीपुर, बिहार - 848124</p>
@@ -292,4 +327,4 @@
 
 </body>
     </html>
-                            
+    
