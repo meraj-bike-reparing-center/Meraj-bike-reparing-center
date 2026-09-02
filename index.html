@@ -19,114 +19,133 @@
         header {
             background: linear-gradient(135deg, #ff4757, #ff6b81);
             color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
         header h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
+            font-size: 32px;
+            margin-bottom: 8px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         header p {
-            font-size: 16px;
-            opacity: 0.9;
+            font-size: 18px;
+            opacity: 0.95;
         }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 0 15px;
+        
+        /* Main Layout Wrapper for Desktop & Mobile responsiveness */
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
-        .btn-call {
-            display: block;
-            background-color: #25d366;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
         }
-        .btn-whatsapp {
-            display: block;
-            background-color: #128c7e;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+
+        @media (min-width: 768px) {
+            .action-buttons {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
-        .btn-map {
-            display: block;
-            background-color: #ff4757;
-            color: white;
-            text-align: center;
+
+        .btn-call, .btn-whatsapp, .btn-map {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 16px;
             font-size: 18px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s, opacity 0.2s;
+            text-align: center;
         }
+        .btn-call { background-color: #25d366; }
+        .btn-whatsapp { background-color: #128c7e; }
+        .btn-map { background-color: #ff4757; }
+
+        .btn-call:hover, .btn-whatsapp:hover, .btn-map:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Grid layout for content cards on desktop */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .full-width {
+                grid-column: span 2;
+            }
+        }
+
         .card {
             background-color: #1e1e1e;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
             border-left: 5px solid #ff4757;
         }
         .card h2 {
             font-size: 22px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #ff6b81;
+            border-bottom: 2px solid #2c2c2c;
+            padding-bottom: 10px;
         }
         .offer-img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             border: 1px solid #444;
         }
         .service-list {
             list-style: none;
         }
         .service-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #2c2c2c;
-            font-size: 16px;
+            font-size: 17px;
         }
         .service-list li:last-child {
             border-bottom: none;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             color: #ff6b81;
             font-weight: bold;
+            font-size: 15px;
         }
         .form-group input[type="text"], 
         .form-group input[type="tel"], 
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 12px 15px;
             background-color: #2c2c2c;
             border: 1px solid #444;
             color: white;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 16px;
         }
         .form-group select option {
@@ -137,63 +156,70 @@
             background-color: #25d366;
             color: white;
             border: none;
-            padding: 14px 20px;
-            font-size: 16px;
+            padding: 15px;
+            font-size: 17px;
             font-weight: bold;
             width: 100%;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
         .btn-submit:hover {
             background-color: #20ba5a;
+            transform: translateY(-2px);
         }
         .location-banner {
             background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
             border: 2px dashed #25d366;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 25px;
             text-align: center;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
         }
         .location-banner h2 {
             color: #25d366;
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 10px;
         }
         .btn-map-direct {
             display: inline-block;
             background-color: #25d366;
             color: white;
-            padding: 12px 24px;
-            font-size: 16px;
+            padding: 14px 28px;
+            font-size: 17px;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-top: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn-map-direct:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
         }
         .address-box {
             background-color: #1e1e1e;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 25px;
             text-align: center;
-            margin-bottom: 30px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
             border: 1px solid #333;
         }
         .address-box h3 {
             color: #ff4757;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 12px;
         }
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background-color: #0a0a0a;
             color: #777;
-            font-size: 14px;
+            font-size: 15px;
+            margin-top: 40px;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
@@ -204,98 +230,99 @@
         <p>आपकी बाइक की बेहतरीन सर्विस और रिपेयरिंग सेंटर</p>
     </header>
 
-    <div class="container">
+    <div class="page-wrapper">
         
-        <!-- Call Button -->
-        <a href="tel:8130585587" class="btn-call">📞 डायरेक्ट कॉल करें: 8130585587</a>
-
-        <!-- Direct WhatsApp Chat Button -->
-        <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20अपनी%20बाइक%20की%20सर्विस/रिपेयरिंग%20करवानी%20है।" target="_blank" class="btn-whatsapp">
-            💬 WhatsApp पर डायरेक्ट चैट करें
-        </a>
-
-        <!-- Google Map Button -->
-        <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map">
-            📍 गूगल मैप पर दुकान का रास्ता देखें
-        </a>
-
-        <!-- Special Offer Section with Image -->
-        <div class="card">
-            <h2>💡 स्पेशल ऑफर</h2>
-            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="Bike Repairing" class="offer-img">
-            <p><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ!)।</p>
-            <p style="margin-top: 10px; color: #25d366;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
+        <!-- Top Action Buttons Grid -->
+        <div class="action-buttons">
+            <a href="tel:8130585587" class="btn-call">📞 डायरेक्ट कॉल करें</a>
+            <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20अपनी%20बाइक%20की%20सर्विस/रिपेयरिंग%20करवानी%20है।" target="_blank" class="btn-whatsapp">💬 WhatsApp चैट</a>
+            <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map">📍 गूगल मैप रास्ता</a>
         </div>
 
-        <!-- Services Section -->
-        <div class="card">
-            <h2>🛠️ हमारी मुख्य सेवाएँ</h2>
-            <ul class="service-list">
-                <li>🔧 कंपलीट बाइक सर्विसिंग और ट्यूनिंग</li>
-                <li>⚙️ इंजन रिपेयरिंग और मेंटेनेंस</li>
-                <li>💡 वायरिंग और इलेक्ट्रिकल काम</li>
-                <li>🛞 टायर और ब्रेक सर्विस</li>
-            </ul>
-        </div>
+        <!-- Content Grid for Desktop & Mobile -->
+        <div class="content-grid">
 
-        <!-- Professional Booking Form with Problem Menu -->
-        <div class="card">
-            <h2>📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h2>
-            <p style="font-size: 14px; color: #aaa; margin-bottom: 15px;">अपनी डिटेल्स भरकर सीधे WhatsApp पर बुकिंग भेजें:</p>
-            
-            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-                <div class="form-group">
-                    <label for="name">आपका नाम:</label>
-                    <input type="text" id="name" placeholder="अपना पूरा नाम लिखें" required>
-                </div>
+            <!-- Special Offer Section -->
+            <div class="card">
+                <h2>💡 स्पेशल ऑफर</h2>
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="Bike Repairing" class="offer-img">
+                <p><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ!)।</p>
+                <p style="margin-top: 12px; color: #25d366; font-weight: bold;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
+            </div>
+
+            <!-- Services Section -->
+            <div class="card">
+                <h2>🛠️ हमारी मुख्य सेवाएँ</h2>
+                <ul class="service-list">
+                    <li>🔧 कंपलीट बाइक सर्विसिंग और ट्यूनिंग</li>
+                    <li>⚙️ इंजन रिपेयरिंग और मेंटेनेंस</li>
+                    <li>💡 वायरिंग और इलेक्ट्रिकल काम</li>
+                    <li>🛞 टायर और ब्रेक सर्विस</li>
+                </ul>
+            </div>
+
+            <!-- Professional Booking Form (Spans full width or fits nicely) -->
+            <div class="card full-width">
+                <h2>📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h2>
+                <p style="font-size: 14px; color: #aaa; margin-bottom: 20px;">अपनी डिटेल्स भरकर सीधे WhatsApp पर बुकिंग भेजें:</p>
                 
-                <div class="form-group">
-                    <label for="phone">मोबाइल नंबर:</label>
-                    <input type="tel" id="phone" placeholder="अपना फोन नंबर लिखें" required>
-                </div>
+                <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                    <div class="content-grid" style="gap: 0 20px;">
+                        <div class="form-group">
+                            <label for="name">आपका नाम:</label>
+                            <input type="text" id="name" placeholder="अपना पूरा नाम लिखें" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">मोबाइल नंबर:</label>
+                            <input type="tel" id="phone" placeholder="अपना फोन नंबर लिखें" required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="bike-model">गाड़ी का नाम (Bike Model):</label>
-                    <input type="text" id="bike-model" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
-                </div>
+                        <div class="form-group">
+                            <label for="bike-model">गाड़ी का नाम (Bike Model):</label>
+                            <input type="text" id="bike-model" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
+                        </div>
 
-                <div class="form-group">
-                    <label for="service-choice">समस्या / क्या काम कराना है? (मेन्यू चुनें):</label>
-                    <select id="service-choice" required>
-                        <option value="" disabled selected>-- सूची में से समस्या चुनें --</option>
-                        <option value="जनरल सर्विस (General Service)">🛠️ जनरल सर्विस करवानी है</option>
-                        <option value="इंजन का काम (Engine Repairing)">⚙️ इंजन का काम करवाना है</option>
-                        <option value="वायरिंग समस्या (Wiring Work)">💡 वायरिंग की समस्या है</option>
-                        <option value="इंजन ऑयल बदलना (Engine Oil Change)">🛢️ इंजन ऑयल बदलना है</option>
-                        <option value="ब्रेक और टायर सर्विस (Break & Tyre)">🛞 ब्रेक या टायर की समस्या है</option>
-                        <option value="CYT LED बल्ब लगवाना - ₹350">💡 CYT LED बल्ब लगवाना है (₹350)</option>
-                        <option value="अन्य समस्या / पूछताछ के लिए">💬 अन्य समस्या / पूछताछ करनी है</option>
-                    </select>
-                </div>
+                        <div class="form-group">
+                            <label for="service-choice">समस्या / क्या काम कराना है?:</label>
+                            <select id="service-choice" required>
+                                <option value="" disabled selected>-- सूची में से समस्या चुनें --</option>
+                                <option value="जनरल सर्विस (General Service)">🛠️ जनरल सर्विस करवानी है</option>
+                                <option value="इंजन का काम (Engine Repairing)">⚙️ इंजन का काम करवाना है</option>
+                                <option value="वायरिंग समस्या (Wiring Work)">💡 वायरिंग की समस्या है</option>
+                                <option value="इंजन ऑयल बदलना (Engine Oil Change)">🛢️ इंजन ऑयल बदलना है</option>
+                                <option value="ब्रेक और टायर सर्विस (Break & Tyre)">🛞 ब्रेक या टायर की समस्या है</option>
+                                <option value="CYT LED बल्ब लगवाना - ₹350">💡 CYT LED बल्ब लगवाना है (₹350)</option>
+                                <option value="अन्य समस्या / पूछताछ के लिए">💬 अन्य समस्या / पूछताछ करनी है</option>
+                            </select>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">अन्य कोई खास दिक्कत (Details):</label>
-                    <textarea id="message" rows="3" placeholder="गाड़ी में और क्या दिक्कत आ रही है, विस्तार से लिखें..."></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="message">अन्य कोई खास दिक्कत (Details):</label>
+                        <textarea id="message" rows="3" placeholder="गाड़ी में और क्या दिक्कत आ रही है, विस्तार से लिखें..."></textarea>
+                    </div>
 
-                <button type="submit" class="btn-submit">💬 WhatsApp पर बुकिंग भेजें</button>
-            </form>
-        </div>
+                    <button type="submit" class="btn-submit">💬 WhatsApp पर बुकिंग भेजें</button>
+                </form>
+            </div>
 
-        <!-- Direct GPS Location Banner -->
-        <div class="location-banner">
-            <h2>📍 दुकान की सटीक लाइव लोकेशन</h2>
-            <p style="font-size: 14px; color: #ccc; margin-top: 5px;">बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
-            <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map-direct">
-                🗺️ Google Maps पर नेविगेट करें
-            </a>
-        </div>
+            <!-- Location Banner -->
+            <div class="location-banner full-width">
+                <h2>📍 दुकान की सटीक लाइव लोकेशन</h2>
+                <p style="font-size: 15px; color: #ccc; margin-top: 5px;">बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
+                <a href="https://maps.app.goo.gl/MVPGPCYqXeaur7zM7" target="_blank" class="btn-map-direct">
+                    🗺️ Google Maps पर नेविगेट करें
+                </a>
+            </div>
 
-        <!-- Address Box -->
-        <div class="address-box">
-            <h3>📍 वर्कशॉप का पता (Workshop Address)</h3>
-            <p><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान</strong><br>जिला: समस्तीपुर, बिहार - 848124</p>
-            <p style="margin-top: 10px; color: #ff6b81; font-weight: bold;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            <!-- Address Box -->
+            <div class="address-box full-width">
+                <h3>📍 वर्कशॉप का पता (Workshop Address)</h3>
+                <p style="font-size: 18px;"><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान</strong><br>जिला: समस्तीपुर, बिहार - 848124</p>
+                <p style="margin-top: 12px; color: #ff6b81; font-weight: bold; font-size: 16px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            </div>
+
         </div>
 
     </div>
@@ -326,5 +353,5 @@
     </script>
 
 </body>
-    </html>
+                                </html>
     
