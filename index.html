@@ -37,7 +37,6 @@
         .offer-box img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px; }
         .offer-box p { font-size: 12px; margin-bottom: 6px; }
 
-        /* Clean Simple Services List (No Photos) */
         .services-box { background: #222; border: 1px solid #444; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
         .services-box h3 { color: #ff9800; font-size: 14px; margin-bottom: 8px; }
         .services-list { list-style: none; font-size: 12px; }
@@ -112,7 +111,6 @@
             <p style="color: #4caf50; font-weight: bold; font-size: 11px;">✔ तेज रोशनी | ✔ तुरंत दुकान पर फिटिंग</p>
         </div>
 
-        <!-- Clean Text Services Menu (No Photos) -->
         <div class="services-box">
             <h3>🛠️ हमारी मुख्य सेवाएँ (Service Menu)</h3>
             <ul class="services-list">
@@ -161,18 +159,13 @@
                 let work = document.getElementById('workType').value;
                 let details = document.getElementById('custDetails').value;
 
-                // New Stylish WhatsApp Message Format
-                let msg = "━━━━━━━━━━━━━━━━━━━%0A" +
-                          "🏍️ *MERAJ BIKE MECHANIC* 🏍️%0A" +
-                          "📌 *New Online Service Request!*%0A" +
-                          "━━━━━━━━━━━━━━━━━━━%0A%0A" +
-                          "👤 *Customer Name:* " + name + "%0A" +
-                          "📞 *Phone Number:* " + phone + "%0A" +
-                          "🛵 *Bike Model:* " + bike + "%0A" +
-                          "🔧 *Service / Issue:* " + work + "%0A" +
-                          "💬 *Extra Details:* " + (details ? details : "None") + "%0A%0A" +
-                          "━━━━━━━━━━━━━━━━━━━%0A" +
-                          "⚡ *Please respond quickly!*";
+                // Clean and Simple WhatsApp Format
+                let msg = "🛠️ नई सर्विस बुकिंग\n\n" +
+                          "👤 नाम: " + name + "\n" +
+                          "📞 मोबाइल: " + phone + "\n" +
+                          "🏍️ गाड़ी: " + bike + "\n" +
+                          "🔧 काम: " + work + "\n" +
+                          "📝 विवरण: " + (details ? details : "कुछ नहीं");
 
                 let url = "https://wa.me/918130585587?text=" + encodeURIComponent(msg);
                 window.open(url, '_blank');
@@ -196,5 +189,4 @@
         </div>
     </div>
 </body>
-                </html>
-                
+</html>
