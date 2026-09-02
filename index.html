@@ -6,60 +6,65 @@
     <title>Meraj Bike Repairing Centre</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-        body { background-color: #121212; color: #e0e0e0; line-height: 1.5; padding: 10px; }
-        .container { max-width: 600px; margin: 0 auto; background: #1e1e1e; padding: 15px; border-radius: 8px; }
-        .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
-        .header h1 { color: #ff4d4d; font-size: 22px; margin-bottom: 5px; }
-        .header p { color: #b0b0b0; font-size: 13px; }
-        .info-bar { background: #2a2a2a; padding: 8px; font-size: 12px; text-align: center; border-radius: 4px; margin-bottom: 15px; color: #ddd; }
+        body { background-color: #121212; color: #e0e0e0; line-height: 1.5; padding: 20px; }
         
-        .banner { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px; }
-        .banner h2 { font-size: 18px; margin-bottom: 5px; }
-        .banner p { font-size: 13px; margin-bottom: 10px; opacity: 0.95; }
-        .banner a { display: inline-block; background: white; color: #dc2743; padding: 6px 12px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 12px; }
+        /* यहाँ साइज को चौड़ा किया गया है ताकि लैपटॉप और मोबाइल दोनों पर बढ़िया लगे */
+        .container { max-width: 850px; margin: 0 auto; background: #1e1e1e; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        
+        .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 12px; margin-bottom: 20px; }
+        .header h1 { color: #ff4d4d; font-size: 26px; margin-bottom: 5px; }
+        .header p { color: #b0b0b0; font-size: 14px; }
+        
+        .info-bar { background: #2a2a2a; padding: 10px; font-size: 13px; text-align: center; border-radius: 6px; margin-bottom: 20px; color: #ddd; }
+        
+        .banner { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 18px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
+        .banner h2 { font-size: 20px; margin-bottom: 5px; }
+        .banner p { font-size: 14px; margin-bottom: 10px; opacity: 0.95; }
+        .banner a { display: inline-block; background: white; color: #dc2743; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 13px; }
 
-        .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 12px; border-radius: 6px; margin-bottom: 15px; text-align: center; }
-        .emergency-box h3 { color: #ff4d4d; font-size: 14px; margin-bottom: 8px; }
-        .btn-call, .btn-whatsapp { display: block; width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 13px; text-align: center; }
+        .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .emergency-box h3 { color: #ff4d4d; font-size: 16px; margin-bottom: 8px; }
+        .btn-call, .btn-whatsapp { display: block; width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 14px; text-align: center; }
         .btn-call { background: #d32f2f; color: white; }
         .btn-whatsapp { background: #388e3c; color: white; }
 
-        .grid-boxes { display: flex; gap: 10px; margin-bottom: 15px; }
-        .grid-box { flex: 1; background: #2a2415; border: 1px solid #ffc107; padding: 10px; border-radius: 6px; font-size: 11px; }
-        .grid-box h3 { color: #ffc107; font-size: 12px; margin-bottom: 6px; }
+        /* लैपटॉप पर दोनों बॉक्स आमने-सामने आएंगे, मोबाइल पर नीचे-ऊपर */
+        .grid-boxes { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+        .grid-box { flex: 1; min-width: 250px; background: #2a2415; border: 1px solid #ffc107; padding: 15px; border-radius: 8px; font-size: 12px; }
+        .grid-box h3 { color: #ffc107; font-size: 14px; margin-bottom: 8px; }
         .grid-box.green { background: #152a1a; border-color: #4caf50; }
         .grid-box.green h3 { color: #4caf50; }
-        .grid-box ul { padding-left: 12px; }
-        .grid-box li { margin-bottom: 4px; }
+        .grid-box ul { padding-left: 15px; }
+        .grid-box li { margin-bottom: 6px; }
 
-        .offer-box { background: #1a262c; border: 1px solid #00bcd4; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
-        .offer-box h3 { color: #00bcd4; font-size: 14px; margin-bottom: 8px; }
-        .offer-box img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px; }
-        .offer-box p { font-size: 12px; margin-bottom: 6px; }
+        .offer-box { background: #1a262c; border: 1px solid #00bcd4; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .offer-box h3 { color: #00bcd4; font-size: 16px; margin-bottom: 10px; }
+        .offer-box img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 10px; }
+        .offer-box p { font-size: 13px; margin-bottom: 6px; }
 
-        .services-box { background: #222; border: 1px solid #444; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
-        .services-box h3 { color: #ff9800; font-size: 14px; margin-bottom: 8px; }
-        .services-list { list-style: none; font-size: 12px; }
-        .services-list li { padding: 6px 0; border-bottom: 1px solid #333; display: flex; justify-content: space-between; }
+        .services-box { background: #222; border: 1px solid #444; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .services-box h3 { color: #ff9800; font-size: 16px; margin-bottom: 10px; }
+        .services-list { list-style: none; font-size: 13px; }
+        .services-list li { padding: 8px 0; border-bottom: 1px solid #333; display: flex; justify-content: space-between; flex-wrap: wrap; }
         .services-list li:last-child { border-bottom: none; }
         .services-list span { color: #ff9800; font-weight: bold; }
 
-        .reviews-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; font-size: 12px; }
-        .reviews-box h3 { color: #e91e63; font-size: 14px; margin-bottom: 8px; }
-        .review-item { background: #2a2a2a; padding: 8px; border-radius: 4px; margin-bottom: 8px; font-style: italic; }
-        .review-item span { display: block; font-style: normal; font-weight: bold; margin-top: 4px; color: #aaa; font-size: 11px; }
+        .reviews-box { background: #222; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; }
+        .reviews-box h3 { color: #e91e63; font-size: 16px; margin-bottom: 10px; }
+        .review-item { background: #2a2a2a; padding: 10px; border-radius: 6px; margin-bottom: 10px; font-style: italic; }
+        .review-item span { display: block; font-style: normal; font-weight: bold; margin-top: 5px; color: #aaa; font-size: 12px; }
 
-        .booking-box { background: #1a2332; border: 1px solid #2196f3; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
-        .booking-box h3 { color: #2196f3; font-size: 14px; margin-bottom: 8px; }
-        .booking-form input, .booking-form select, .booking-form textarea { width: 100%; padding: 8px; margin-bottom: 8px; background: #222; border: 1px solid #444; color: white; border-radius: 4px; font-size: 12px; }
-        .booking-form button { width: 100%; padding: 9px; background: #2196f3; color: white; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .booking-box { background: #1a2332; border: 1px solid #2196f3; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .booking-box h3 { color: #2196f3; font-size: 16px; margin-bottom: 10px; }
+        .booking-form input, .booking-form select, .booking-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; background: #222; border: 1px solid #444; color: white; border-radius: 6px; font-size: 13px; }
+        .booking-form button { width: 100%; padding: 12px; background: #2196f3; color: white; border: none; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 14px; }
 
-        .footer-grid { display: flex; gap: 10px; margin-bottom: 10px; }
-        .footer-box { flex: 1; background: #222; border: 1px solid #444; padding: 10px; border-radius: 6px; font-size: 11px; text-align: center; }
-        .footer-box h3 { color: #ff4d4d; font-size: 12px; margin-bottom: 6px; }
+        .footer-grid { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .footer-box { flex: 1; min-width: 250px; background: #222; border: 1px solid #444; padding: 12px; border-radius: 8px; font-size: 12px; text-align: center; }
+        .footer-box h3 { color: #ff4d4d; font-size: 14px; margin-bottom: 6px; }
         .footer-box.blue h3 { color: #2196f3; }
-        .map-btn { display: inline-block; background: #2196f3; color: white; padding: 6px 10px; border-radius: 4px; text-decoration: none; font-weight: bold; margin-top: 5px; font-size: 11px; }
-        .copyright { text-align: center; font-size: 10px; color: #777; margin-top: 10px; }
+        .map-btn { display: inline-block; background: #2196f3; color: white; padding: 8px 12px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 8px; font-size: 12px; }
+        .copyright { text-align: center; font-size: 11px; color: #777; margin-top: 15px; }
     </style>
 </head>
 <body>
@@ -81,7 +86,7 @@
 
         <div class="emergency-box">
             <h3>⚠️ तुरंत क्या करें?</h3>
-            <p style="font-size: 11px; margin-bottom: 8px; color: #ccc;">अपनी बाइक लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
+            <p style="font-size: 12px; margin-bottom: 10px; color: #ccc;">अपनी बाइक लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
             <a href="tel:8130585587" class="btn-call">📞 इमरजेंसी कॉल: 8130585587</a>
             <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">🟢 WhatsApp पर लोकेशन भेजें</a>
         </div>
@@ -106,9 +111,9 @@
 
         <div class="offer-box">
             <h3>💡 स्पेशल ऑफर</h3>
-            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Bike Offer">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" alt="Bike Offer">
             <p><strong>CYT LED High Quality Bulb:</strong> बाहर ₹500, यहाँ मात्र ₹350 में (फिटिंग के साथ)।</p>
-            <p style="color: #4caf50; font-weight: bold; font-size: 11px;">✔ तेज रोशनी | ✔ तुरंत दुकान पर फिटिंग</p>
+            <p style="color: #4caf50; font-weight: bold; font-size: 12px;">✔ तेज रोशनी | ✔ तुरंत दुकान पर फिटिंग</p>
         </div>
 
         <div class="services-box">
@@ -135,53 +140,4 @@
 
         <div class="booking-box">
             <h3>📅 ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
-            <form class="booking-form" onsubmit="sendToWhatsApp(event)">
-                <input type="text" id="custName" placeholder="आपका नाम (नाम पूरा लिखें)" required>
-                <input type="tel" id="custPhone" placeholder="मोबाइल नंबर (फोन नंबर लिखें)" required>
-                <input type="text" id="bikeModel" placeholder="गाड़ी का नाम (Bike Model: जैसे Splendor, Pulsar)" required>
-                <select id="workType" required>
-                    <option value="">-- समस्या / काम चुनें --</option>
-                    <option value="सर्विसिंग">सर्विसिंग</option>
-                    <option value="इंजन काम">इंजन काम</option>
-                    <option value="अन्य समस्या">अन्य समस्या</option>
-                </select>
-                <textarea id="custDetails" rows="2" placeholder="अन्य विवरण (यदि कुछ और बताना हो)..."></textarea>
-                <button type="submit">🟢 WhatsApp पर बुकिंग भेजें</button>
-            </form>
-        </div>
-
-        <script>
-            function sendToWhatsApp(event) {
-                event.preventDefault();
-                let name = document.getElementById('custName').value;
-                let phone = document.getElementById('custPhone').value;
-                let bike = document.getElementById('bikeModel').value;
-                let work = document.getElementById('workType').value;
-                let details = document.getElementById('custDetails').value;
-                if (!details) { details = "लागू नहीं"; }
-
-                let msg = "नई सर्विस बुकिंग\n\nनाम: " + name + "\nमोबाइल: " + phone + "\nगाड़ी: " + bike + "\nकाम: " + work + "\nविवरण: " + details;
-
-                let url = "https://api.whatsapp.com/send?phone=918130585587&text=" + encodeURIComponent(msg);
-                window.open(url, '_blank');
-            }
-        </script>
-
-        <div class="footer-grid">
-            <div class="footer-box blue">
-                <h3>📍 दुकान की लाइव लोकेशन</h3>
-                <p style="font-size: 10px; color: #aaa;">सीधे दुकान पर पहुँचने के लिए क्लिक करें:</p>
-                <a href="Https://maps.app.goo.gl/v8RdFZXzSX3DGACE8?g_st=ac" target="_blank" class="map-btn">🗺️ Google Maps पर नेविगेट करें</a>
-            </div>
-            <div class="footer-box">
-                <h3>📌 वर्कशॉप का पता</h3>
-                <p style="font-size: 10px; color: #ccc;">सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114<br>सही काम, सही दाम (पूरी गारंटी के साथ)</p>
-            </div>
-        </div>
-
-        <div class="copyright">
-            © 2026 Meraj Bike Repairing Centre, All Rights Reserved.
-        </div>
-    </div>
-</body>
-</html>
+            
