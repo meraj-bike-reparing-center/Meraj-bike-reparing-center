@@ -160,6 +160,54 @@
             margin-bottom: 12px;
         }
 
+        /* Engine Warranty Rules Box */
+        .engine-rule-box {
+            background: rgba(255, 183, 3, 0.1);
+            border: 2px solid var(--accent-yellow);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .engine-rule-box h4 {
+            color: var(--accent-yellow);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .engine-rule-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .engine-rule-box li {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .engine-rule-box li i {
+            color: var(--primary-red);
+            margin-top: 4px;
+        }
+
+        .engine-warning-note {
+            background: rgba(230, 57, 70, 0.2);
+            border-left: 4px solid var(--primary-red);
+            padding: 10px 12px;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            color: #ff6b6b;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
         .btn {
             display: flex;
             align-items: center;
@@ -419,6 +467,18 @@
             </a>
         </div>
 
+        <!-- ⚠️ Engine Warranty & Rules Box (New) -->
+        <div class="engine-rule-box">
+            <h4><i class="fa-solid fa-triangle-exclamation"></i> इंजन रीबिल्डिंग / काम के विशेष नियम एवं शर्तें</h4>
+            <ul>
+                <li><i class="fa-solid fa-circle-chevron-right"></i> <strong>शुरुआती 500 KM:</strong> इंजन का काम होने के बाद पहले 500 किलोमीटर तक गाड़ी हमेशा <strong>सिंगल सवारी</strong> चलाएं और ज्यादा रेस न दें।</li>
+                <li><i class="fa-solid fa-circle-chevron-right"></i> <strong>मोबिल (Engine Oil) बदलना:</strong> ठीक 500 किलोमीटर पूरा होने पर दुकान पर आकर इंजन ऑयल बदलवाना अनिवार्य है।</li>
+            </ul>
+            <div class="engine-warning-note">
+                ⚠️ चेतावनी: 500 KM के बाद समय पर इंजन ऑयल न बदलवाने पर या नियम तोड़ने से गाड़ी में धुआं आने या इंजन सीज होने पर दुकान की कोई जिम्मेदारी नहीं होगी।
+            </div>
+        </div>
+
         <!-- Special Offer Box -->
         <div class="offer-box">
             <div class="offer-title">💡 स्पेशल ऑफर</div>
@@ -527,14 +587,4 @@
                           `🏍️ *गाड़ी का मॉडल:* ${bike}%0a` +
                           `🔧 *चुनी गई समस्या:* ${problem}%0a` +
                           `📝 *अन्य विवरण:* ${details ? details : 'कुछ नहीं'}%0a` +
-                          `----------------------------------------%0a` +
-                          `कृपया जल्द संपर्क करें!`;
-            
-            let whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
-
-</body>
-    </html>
-    
+                    
