@@ -407,11 +407,11 @@
 
         <div class="emergency-box">
             <h4>⚠️ तुरंत क्या करें?</h4>
-            <p>अपनी लाइव लोकेशन और गाड़ी की समस्या सीधे WhatsApp पर भेजें, या तुरंत कॉल करें ताकि हम आपकी मदद के लिए जल्दी पहुँच सकें।</p>
+            <p>अपनी लाइव लोकेशन और गाड़ी की समस्या सीधे WhatsApp पर भेजें, या तुरंत कॉल करें ताकि हम आपकी मदद के लिए जल्दी पहुँच सकें。</p>
             <a href="tel:8130585587" class="btn btn-call">
                 <i class="fa-solid fa-phone"></i> इमर्जेंसी कॉल करें: 8130585587
             </a>
-            <a href="https://wa.me/918130585587?text=नमस्ते%20मेरज%20बाइक%20मैकेनिक,%20मुझे%20इमर्जेंसी%20मदद%20चाहिए।" class="btn btn-whatsapp" target="_blank">
+            <a href="https://wa.me/918130585587?text=नमस्ते%20मेरज%20बाइक%20मैकेनिक,%20मुझे%20इमर्जेंसी%20मदद%20चाहिए。" class="btn btn-whatsapp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> WhatsApp पर लोकेशन और मदद भेजें
             </a>
         </div>
@@ -421,111 +421,4 @@
             <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="LED Bulb" class="offer-img">
             <p class="offer-desc"><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ)।</p>
             <p style="font-size: 0.9rem; color: #25d366;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
-        </div>
-
-        <h3 class="section-title">🛠️ हमारी मुख्य सेवाएँ</h3>
-        <div class="services-grid">
-            <div class="service-item"><i class="fa-solid fa-check"></i> क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</div>
-            <div class="service-item"><i class="fa-solid fa-check"></i> इंजन रिपेयरिंग और मेंटेनेंस</div>
-            <div class="service-item"><i class="fa-solid fa-check"></i> वायरिंग और इलेक्ट्रिकल काम</div>
-            <div class="service-item"><i class="fa-solid fa-check"></i> टायर और ब्रेक सर्विस</div>
-        </div>
-
-        <div class="reviews-box">
-            <h4 style="color: var(--accent-yellow); margin-bottom: 12px;"><i class="fa-solid fa-star"></i> ग्राहकों के अनुभव (Customer Reviews)</h4>
-            <div class="review-card">
-                <p>"मेरज भाई ने मेरी पल्सर का इंजन ऐसा बना दिया कि मज़ा आ गया! काम एकदम पक्का और सही दाम पर।"</p>
-                <span>- राहुल कुमार (सरायरंजन)</span>
-            </div>
-            <div class="review-card">
-                <p>"अचानक रास्ते में बाइक बंद हो गई थी, WhatsApp पर लोकेशन भेजते ही भाई ने तुरंत मदद की। बेहतरीन सर्विस!"</p>
-                <span>- अमित सिंह</span>
-            </div>
-        </div>
-
-        <h3 class="section-title">📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
-        <div class="form-container">
-            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-                <div class="form-group">
-                    <label>आपका नाम:</label>
-                    <input type="text" id="clientName" class="form-control" placeholder="अपना पूरा नाम लिखें" required>
-                </div>
-                <div class="form-group">
-                    <label>मोबाइल नंबर:</label>
-                    <input type="tel" id="clientPhone" class="form-control" placeholder="अपना फोन नंबर लिखें" required>
-                </div>
-                <div class="form-group">
-                    <label>गाड़ी का नाम (Bike Model):</label>
-                    <input type="text" id="clientBike" class="form-control" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
-                </div>
-                <div class="form-group">
-                    <label>समस्या चुनें (Service/Problem Menu):</label>
-                    <select id="clientProblem" class="form-control" required>
-                        <option value="" disabled selected>-- बाइक की समस्या / काम चुनें --</option>
-                        <option value="क्वालिटी बाइक सर्विसिंग और ट्यूनिंग">क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</option>
-                        <option value="इंजन रिपेयरिंग और मेंटेनेंस">इंजन रिपेयरिंग और मेंटेनेंस</option>
-                        <option value="वायरिंग और इलेक्ट्रिकल काम">वायरिंग और इलेक्ट्रिकल काम</option>
-                        <option value="टायर और ब्रेक सर्विस">टायर और ब्रेक सर्विस</option>
-                        <option value="CYT LED बल्ब फिटिंग (₹350)">CYT LED बल्ब फिटिंग (₹350)</option>
-                        <option value="अन्य कोई काम या खराबी">अन्य कोई काम या खराबी</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>अन्य विवरण (यदि कुछ और बताना हो):</label>
-                    <textarea id="clientDetails" class="form-control" placeholder="गाड़ी में कोई अन्य दिक्कत हो तो यहाँ लिखें..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp पर बुकिंग भेजें
-                </button>
-            </form>
-        </div>
-
-        <div class="map-section">
-            <h4>📍 दुकान की सटीक लाइव लोकेशन</h4>
-            <p>बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
-            <a href="https://maps.app.goo.gl/9KiYeWCz7pZY9J879" target="_blank" class="btn btn-map">
-                <i class="fa-solid fa-map-location-dot"></i> Google Maps पर नेविगेट करें
-            </a>
-        </div>
-
-        <div class="address-box">
-            <h4>📍 वर्कशॉप का पता (Workshop Address)</h4>
-            <p><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</strong></p>
-            <p style="color: var(--accent-yellow); font-size: 0.9rem; margin-top: 5px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
-        </div>
-
-    </div>
-
-    <footer>
-        <p>© 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function sendToWhatsApp(event) {
-            event.preventDefault();
-            let name = document.getElementById('clientName').value;
-            let phone = document.getElementById('clientPhone').value;
-            let bike = document.getElementById('clientBike').value;
-            let problem = document.getElementById('clientProblem').value;
-            let details = document.getElementById('clientDetails').value;
-            
-            let phoneNumber = "918130585587"; 
-            
-            let message = `🛠️ *नया सर्विस बुकिंग अनुरोध - Meraj Bike Repairing Centre*%0a` +
-                          `----------------------------------------%0a` +
-                          `👤 *ग्राहक का नाम:* ${name}%0a` +
-                          `📞 *मोबाइल नंबर:* ${phone}%0a` +
-                          `🏍️ *गाड़ी का मॉडल:* ${bike}%0a` +
-                          `🔧 *चुनी गई समस्या:* ${problem}%0a` +
-                          `📝 *अन्य विवरण:* ${details ? details : 'कुछ नहीं'}%0a` +
-                          `----------------------------------------%0a` +
-                          `कृपया जल्द संपर्क करें!`;
-            
-            let whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
-
-</body>
-    </html>
     
