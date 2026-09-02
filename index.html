@@ -73,7 +73,7 @@
             padding: 0 15px;
         }
 
-        /* --- Instagram & Views Special Highlight Banner --- */
+        /* Instagram Views & Stats Banner */
         .insta-banner {
             background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
             border-radius: 12px;
@@ -118,7 +118,6 @@
             transform: scale(1.06);
             background: #f8f9fa;
         }
-        /* -------------------------------------------------- */
 
         .emergency-box {
             background: rgba(230, 57, 70, 0.15);
@@ -221,6 +220,57 @@
 
         .service-item i {
             color: var(--primary-red);
+        }
+
+        /* Working Hours Box */
+        .timing-box {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .timing-box h4 {
+            color: var(--accent-yellow);
+            margin-bottom: 8px;
+        }
+
+        .timing-box p {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: bold;
+        }
+
+        /* Customer Reviews Section */
+        .reviews-box {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .review-card {
+            background: #121212;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--accent-yellow);
+        }
+
+        .review-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+
+        .review-card span {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: bold;
         }
 
         .form-container {
@@ -346,7 +396,7 @@
 
     <div class="container">
 
-        <!-- 🔥 Instagram Views & Stats Banner (New Added) -->
+        <!-- 🔥 Instagram Views & Stats Banner -->
         <div class="insta-banner">
             <h3>🔥 6.5M+ Views in Last 30 Days</h3>
             <p>हमारे टेक्निकल रील्स और रिपेयरिंग वीडियोज़ को इंस्टाग्राम पर भारी सफलता मिली है!<br>एक अकेले वीडियो पर <strong>4.5 Million+ Views</strong> हैं।</p>
@@ -382,6 +432,25 @@
             <div class="service-item"><i class="fa-solid fa-check"></i> इंजन रिपेयरिंग और मेंटेनेंस</div>
             <div class="service-item"><i class="fa-solid fa-check"></i> वायरिंग और इलेक्ट्रिकल काम</div>
             <div class="service-item"><i class="fa-solid fa-check"></i> टायर और ब्रेक सर्विस</div>
+        </div>
+
+        <!-- Working Hours Box -->
+        <div class="timing-box">
+            <h4>⏰ दुकान खुलने का समय (Working Hours)</h4>
+            <p>सुबह 7:00 बजे से शाम 7:00 बजे तक<br><span style="font-size: 0.85rem; color: var(--accent-yellow);">(सप्ताह के सातों दिन खुली रहती है 🛠️)</span></p>
+        </div>
+
+        <!-- Customer Reviews Section -->
+        <div class="reviews-box">
+            <h4 style="color: var(--accent-yellow); margin-bottom: 12px;"><i class="fa-solid fa-star"></i> ग्राहकों के अनुभव (Customer Reviews)</h4>
+            <div class="review-card">
+                <p>"मेरज भाई ने मेरी पल्सर का इंजन ऐसा बना दिया कि मज़ा आ गया! काम एकदम पक्का और सही दाम पर।"</p>
+                <span>- राहुल कुमार (सरायरंजन)</span>
+            </div>
+            <div class="review-card">
+                <p>"अचानक रास्ते में बाइक बंद हो गई थी, WhatsApp पर लोकेशन भेजते ही भाई ने तुरंत मदद की। बेहतरीन सर्विस!"</p>
+                <span>- अमित सिंह</span>
+            </div>
         </div>
 
         <!-- Online Booking Form -->
@@ -472,4 +541,4 @@
 
 </body>
     </html>
-                
+    
