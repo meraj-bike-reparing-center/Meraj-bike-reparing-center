@@ -33,13 +33,13 @@
 
         header {
             background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-            padding: 20px 15px;
+            padding: 25px 15px;
             text-align: center;
             border-bottom: 3px solid var(--primary-red);
         }
 
         .logo-area h1 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--text-light);
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -51,47 +51,47 @@
         }
 
         .tagline {
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: var(--accent-yellow);
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .location-badge {
             display: inline-block;
             background: rgba(230, 57, 70, 0.2);
             color: #ff6b6b;
-            padding: 3px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             border: 1px solid var(--primary-red);
         }
 
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 15px;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 0 15px;
         }
 
         .emergency-box {
             background: rgba(230, 57, 70, 0.15);
             border: 1px solid var(--primary-red);
-            border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 15px;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .emergency-box h4 {
             color: var(--accent-yellow);
-            margin-bottom: 5px;
-            font-size: 0.95rem;
+            margin-bottom: 8px;
+            font-size: 1.05rem;
         }
 
         .emergency-box p {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .btn {
@@ -101,13 +101,18 @@
             gap: 8px;
             padding: 12px;
             border-radius: 8px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
             color: white;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
             margin-bottom: 10px;
             width: 100%;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
         }
 
         .btn-call { background-color: var(--primary-red); }
@@ -118,53 +123,53 @@
             background: var(--card-bg);
             border: 1px solid #333;
             border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .offer-title {
             color: var(--accent-yellow);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
             font-weight: bold;
         }
 
         .offer-img {
             width: 100%;
-            height: 160px;
+            height: 220px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .offer-desc {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 10px;
         }
 
         .section-title {
-            font-size: 1.1rem;
-            margin: 15px 0 10px 0;
+            font-size: 1.2rem;
+            margin: 20px 0 12px 0;
             color: var(--text-light);
             border-left: 4px solid var(--primary-red);
-            padding-left: 8px;
+            padding-left: 10px;
         }
 
         .services-grid {
             background: var(--card-bg);
             border: 1px solid #333;
             border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
         .service-item {
-            font-size: 0.9rem;
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .service-item i {
@@ -173,36 +178,36 @@
 
         .form-container {
             background: var(--card-bg);
-            padding: 15px;
+            padding: 20px;
             border-radius: 12px;
             border: 1px solid #333;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-group {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.8rem;
-            margin-bottom: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
             color: var(--text-muted);
         }
 
         .form-control {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background: #121212;
             border: 1px solid #444;
             border-radius: 6px;
             color: white;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
 
         textarea.form-control {
             resize: vertical;
-            height: 70px;
+            height: 80px;
         }
 
         .btn-submit {
@@ -212,38 +217,43 @@
             border: none;
             padding: 12px;
             border-radius: 6px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
         }
 
         .map-section {
             background: var(--card-bg);
             border: 2px dashed var(--primary-red);
             border-radius: 12px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .map-section h4 {
             color: var(--accent-yellow);
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .map-section p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .address-box {
             background: var(--card-bg);
             border: 1px solid #333;
             border-radius: 12px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .address-box h4 {
@@ -252,15 +262,28 @@
         }
 
         .address-box p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 5px;
         }
 
         footer {
             text-align: center;
-            padding: 15px;
-            font-size: 0.8rem;
+            padding: 20px;
+            font-size: 0.85rem;
             color: var(--text-muted);
+        }
+
+        /* Desktop Optimization (Larger screens) */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 750px;
+            }
+            .logo-area h1 {
+                font-size: 2.2rem;
+            }
+            .offer-img {
+                height: 280px;
+            }
         }
     </style>
 </head>
@@ -293,7 +316,7 @@
             <div class="offer-title">💡 स्पेशल ऑफर</div>
             <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="LED Bulb" class="offer-img">
             <p class="offer-desc"><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ)।</p>
-            <p style="font-size: 0.85rem; color: #25d366;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
+            <p style="font-size: 0.9rem; color: #25d366;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
         </div>
 
         <!-- Services Section -->
@@ -356,7 +379,7 @@
         <div class="address-box">
             <h4>📍 वर्कशॉप का पता (Workshop Address)</h4>
             <p><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</strong></p>
-            <p style="color: var(--accent-yellow); font-size: 0.85rem; margin-top: 5px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            <p style="color: var(--accent-yellow); font-size: 0.9rem; margin-top: 5px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
         </div>
 
     </div>
@@ -383,5 +406,5 @@
     </script>
 
 </body>
-                                                                       </html>
+    </html>
                 
