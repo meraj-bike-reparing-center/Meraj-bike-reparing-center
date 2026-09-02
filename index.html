@@ -13,7 +13,6 @@
         .header p { color: #b0b0b0; font-size: 13px; }
         .info-bar { background: #2a2a2a; padding: 8px; font-size: 12px; text-align: center; border-radius: 4px; margin-bottom: 15px; color: #ddd; }
         
-        /* Updated Banner Style */
         .banner { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px; }
         .banner h2 { font-size: 18px; margin-bottom: 5px; }
         .banner p { font-size: 13px; margin-bottom: 10px; opacity: 0.95; }
@@ -38,10 +37,15 @@
         .offer-box img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px; }
         .offer-box p { font-size: 12px; margin-bottom: 6px; }
 
-        .services-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; font-size: 12px; }
-        .services-box h3 { color: #ff9800; font-size: 14px; margin-bottom: 8px; }
-        .services-box ul { padding-left: 15px; }
-        .services-box li { margin-bottom: 5px; }
+        /* Updated Services Menu with Photos */
+        .services-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
+        .services-box h3 { color: #ff9800; font-size: 14px; margin-bottom: 10px; }
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .service-card { background: #2a2a2a; border-radius: 6px; overflow: hidden; border: 1px solid #444; }
+        .service-card img { width: 100%; height: 90px; object-fit: cover; }
+        .service-card-content { padding: 8px; }
+        .service-card-content strong { display: block; color: #ff9800; font-size: 11px; margin-bottom: 2px; }
+        .service-card-content p { color: #bbb; font-size: 10px; line-height: 1.3; }
 
         .reviews-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; font-size: 12px; }
         .reviews-box h3 { color: #e91e63; font-size: 14px; margin-bottom: 8px; }
@@ -110,18 +114,43 @@
             <p style="color: #4caf50; font-weight: bold; font-size: 11px;">✔ तेज रोशनी | ✔ तुरंत दुकान पर फिटिंग</p>
         </div>
 
+        <!-- Updated Visual Service Menu with Photos -->
         <div class="services-box">
-            <h3>🛠️ हमारी मुख्य सेवाएँ</h3>
-            <ul>
-                <li>क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</li>
-                <li>इंजन रिपेयरिंग और मेंटेंनेस</li>
-                <li>वायरिंग और इलेक्ट्रिकल काम</li>
-                <li>टायर और ब्रेक सर्विस</li>
-            </ul>
+            <h3>🛠️ हमारी मुख्य सेवाएँ (Service Menu)</h3>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=300&q=80" alt="Service">
+                    <div class="service-card-content">
+                        <strong>सर्विसिंग और ट्यूनिंग</strong>
+                        <p>ऑयल चेंज, कार्बोरेटर सफाई और फुल ट्यूनिंग</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=300&q=80" alt="Engine">
+                    <div class="service-card-content">
+                        <strong>इंजन रिपेयरिंग</strong>
+                        <p>बोर, क्लच और फुल इंजन मेंटेंनेस</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=300&q=80" alt="Electrical">
+                    <div class="service-card-content">
+                        <strong>वायरिंग और इलेक्ट्रिकल</strong>
+                        <p>सेल्फ मोटर, लाइट और वायरिंग समस्या</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&w=300&q=80" alt="Tire">
+                    <div class="service-card-content">
+                        <strong>टायर और ब्रेक सर्विस</strong>
+                        <p>ब्रेक शू, डिस्क पैड और टायर चेंज</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="reviews-box">
-            ### ⭐ ग्राहकों के अनुभव
+            <h3>⭐ ग्राहकों के अनुभव</h3>
             <div class="review-item">
                 "मेरज भाई ने मेरी पल्सर का इंजन ऐसा बना दिया कि मजा आ गया! काम एकदम पक्का।"
                 <span>— राहुल कुमार (सरायरंजन)</span>
@@ -134,26 +163,47 @@
 
         <div class="booking-box">
             <h3>📅 ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
-            <form class="booking-form" onsubmit="event.preventDefault(); alert('बुकिंग भेज दी गई है!');">
-                <input type="text" placeholder="आपका नाम (नाम पूरा लिखें)" required>
-                <input type="tel" placeholder="मोबाइल नंबर (फोन नंबर लिखें)" required>
-                <input type="text" placeholder="गाड़ी का नाम (Bike Model: जैसे Splendor, Pulsar)" required>
-                <select required>
+            <form class="booking-form" onsubmit="sendToWhatsApp(event)">
+                <input type="text" id="custName" placeholder="आपका नाम (नाम पूरा लिखें)" required>
+                <input type="tel" id="custPhone" placeholder="मोबाइल नंबर (फोन नंबर लिखें)" required>
+                <input type="text" id="bikeModel" placeholder="गाड़ी का नाम (Bike Model: जैसे Splendor, Pulsar)" required>
+                <select id="workType" required>
                     <option value="">-- समस्या / काम चुनें --</option>
-                    <option value="service">सर्विसिंग</option>
-                    <option value="engine">इंजन काम</option>
-                    <option value="other">अन्य समस्या</option>
+                    <option value="सर्विसिंग">सर्विसिंग</option>
+                    <option value="इंजन काम">इंजन काम</option>
+                    <option value="अन्य समस्या">अन्य समस्या</option>
                 </select>
-                <textarea rows="2" placeholder="अन्य विवरण (यदि कुछ और बताना हो)..."></textarea>
+                <textarea id="custDetails" rows="2" placeholder="अन्य विवरण (यदि कुछ और बताना हो)..."></textarea>
                 <button type="submit">🟢 WhatsApp पर बुकिंग भेजें</button>
             </form>
         </div>
+
+        <script>
+            function sendToWhatsApp(event) {
+                event.preventDefault();
+                let name = document.getElementById('custName').value;
+                let phone = document.getElementById('custPhone').value;
+                let bike = document.getElementById('bikeModel').value;
+                let work = document.getElementById('workType').value;
+                let details = document.getElementById('custDetails').value;
+
+                let msg = "Hello Meraj Bike Mechanic, mujhe service booking karni hai.%0A%0A" +
+                          "👤 Naam: " + name + "%0A" +
+                          "📞 Mobile: " + phone + "%0A" +
+                          "🏍️ Gaadi: " + bike + "%0A" +
+                          "🛠️ Kaam/Samasya: " + work + "%0A" +
+                          "📝 Vivaran: " + details;
+
+                let url = "https://wa.me/918130585507?text=" + encodeURIComponent(msg);
+                window.open(url, '_blank');
+            }
+        </script>
 
         <div class="footer-grid">
             <div class="footer-box blue">
                 <h3>📍 दुकान की लाइव लोकेशन</h3>
                 <p style="font-size: 10px; color: #aaa;">सीधे दुकान पर पहुँचने के लिए क्लिक करें:</p>
-                <a href="https://maps.google.com" target="_blank" class="map-btn">🗺️ Google Maps पर नेविगेट करें</a>
+                <a href="Https://maps.app.goo.gl/v8RdFZXzSX3DGACE8?g_st=ac" target="_blank" class="map-btn">🗺️ Google Maps पर नेविगेट करें</a>
             </div>
             <div class="footer-box">
                 <h3>📌 वर्कशॉप का पता</h3>
@@ -166,4 +216,5 @@
         </div>
     </div>
 </body>
-</html>
+    </html>
+    
