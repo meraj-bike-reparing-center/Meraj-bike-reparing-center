@@ -306,7 +306,7 @@
             <a href="tel:8130585587" class="btn btn-call">
                 <i class="fa-solid fa-phone"></i> इमर्जेंसी कॉल करें: 8130585587
             </a>
-            <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Bike%20Mechanic,%20I%20need%20emergency%20help." class="btn btn-whatsapp" target="_blank">
+            <a href="https://wa.me/918130585587?text=नमस्ते%20मेरज%20बाइक%20मैकेनिक,%20मुझे%20इमर्जेंसी%20मदद%20चाहिए।" class="btn btn-whatsapp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> WhatsApp पर लोकेशन और मदद भेजें
             </a>
         </div>
@@ -398,7 +398,17 @@
             let details = document.getElementById('clientDetails').value;
             
             let phoneNumber = "918130585587"; 
-            let message = `Hello Meraj Bike Mechanic,%0a*Name:* ${name}%0a*Phone:* ${phone}%0a*Bike:* ${bike}%0a*Problem:* ${problem}%0a*Details:* ${details}`;
+            
+            // हिंदी में फॉर्मेट किया हुआ मैसेज
+            let message = `🛠️ *नया सर्विस बुकिंग अनुरोध - Meraj Bike Repairing Centre*%0a` +
+                          `----------------------------------------%0a` +
+                          `👤 *ग्राहक का नाम:* ${name}%0a` +
+                          `📞 *मोबाइल नंबर:* ${phone}%0a` +
+                          `🏍️ *गाड़ी का मॉडल:* ${bike}%0a` +
+                          `🔧 *चुनी गई समस्या:* ${problem}%0a` +
+                          `📝 *अन्य विवरण:* ${details ? details : 'कुछ नहीं'}%0a` +
+                          `----------------------------------------%0a` +
+                          `कृपया जल्द संपर्क करें!`;
             
             let whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(whatsappUrl, '_blank');
