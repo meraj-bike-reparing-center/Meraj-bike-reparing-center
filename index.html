@@ -37,7 +37,6 @@
         .offer-box img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 8px; }
         .offer-box p { font-size: 12px; margin-bottom: 6px; }
 
-        /* Updated Services Menu with Photos */
         .services-box { background: #222; padding: 12px; border-radius: 6px; margin-bottom: 15px; }
         .services-box h3 { color: #ff9800; font-size: 14px; margin-bottom: 10px; }
         .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -85,8 +84,8 @@
         <div class="emergency-box">
             <h3>⚠️ तुरंत क्या करें?</h3>
             <p style="font-size: 11px; margin-bottom: 8px; color: #ccc;">अपनी बाइक लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
-            <a href="tel:8130585507" class="btn-call">📞 इमरजेंसी कॉल: 8130585507</a>
-            <a href="https://wa.me/918130585507?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">🟢 WhatsApp पर लोकेशन भेजें</a>
+            <a href="tel:8130585587" class="btn-call">📞 इमरजेंसी कॉल: 8130585587</a>
+            <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">🟢 WhatsApp पर लोकेशन भेजें</a>
         </div>
 
         <div class="grid-boxes">
@@ -114,7 +113,6 @@
             <p style="color: #4caf50; font-weight: bold; font-size: 11px;">✔ तेज रोशनी | ✔ तुरंत दुकान पर फिटिंग</p>
         </div>
 
-        <!-- Updated Visual Service Menu with Photos -->
         <div class="services-box">
             <h3>🛠️ हमारी मुख्य सेवाएँ (Service Menu)</h3>
             <div class="service-grid">
@@ -187,14 +185,14 @@
                 let work = document.getElementById('workType').value;
                 let details = document.getElementById('custDetails').value;
 
-                let msg = "Hello Meraj Bike Mechanic, mujhe service booking karni hai.%0A%0A" +
-                          "👤 Naam: " + name + "%0A" +
-                          "📞 Mobile: " + phone + "%0A" +
-                          "🏍️ Gaadi: " + bike + "%0A" +
-                          "🛠️ Kaam/Samasya: " + work + "%0A" +
-                          "📝 Vivaran: " + details;
+                let msg = "🔔 *नयी सर्विस बुकिंग* (Meraj Bike Mechanic)%0A%0A" +
+                          "👤 *ग्राहक का नाम:* " + name + "%0A" +
+                          "📞 *मोबाइल नंबर:* " + phone + "%0A" +
+                          "🏍️ *गाड़ी का नाम:* " + bike + "%0A" +
+                          "🛠️ *काम/समस्या:* " + work + "%0A" +
+                          "📝 *विवरण:* " + (details ? details : "लागू नहीं");
 
-                let url = "https://wa.me/918130585507?text=" + encodeURIComponent(msg);
+                let url = "https://wa.me/918130585587?text=" + encodeURIComponent(msg);
                 window.open(url, '_blank');
             }
         </script>
