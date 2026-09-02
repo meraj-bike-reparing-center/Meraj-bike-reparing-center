@@ -27,21 +27,21 @@
         body {
             background-color: var(--dark-bg);
             color: var(--text-light);
-            line-height: 1.6;
-            padding-bottom: 70px;
+            line-height: 1.5;
+            padding-bottom: 50px;
         }
 
         header {
             background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-            padding: 22px 15px;
+            padding: 18px 10px;
             text-align: center;
             border-bottom: 3px solid var(--primary-red);
         }
 
         .logo-area h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--text-light);
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -51,27 +51,27 @@
         }
 
         .tagline {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: var(--accent-yellow);
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .header-badges {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            margin-top: 8px;
+            gap: 6px;
+            margin-top: 6px;
         }
 
         .location-badge, .time-badge {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
-            padding: 5px 12px;
+            gap: 4px;
+            padding: 4px 10px;
             border-radius: 20px;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
         }
 
         .location-badge {
@@ -88,94 +88,99 @@
         }
 
         .container {
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 0 15px;
+            max-width: 900px;
+            margin: 15px auto;
+            padding: 0 10px;
+        }
+
+        /* Grid layout for compact look */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         /* Instagram Banner */
         .insta-banner {
             background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 15px;
             text-align: center;
             color: white;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
             border: 1px solid rgba(255,255,255,0.2);
         }
 
         .insta-banner h3 {
-            font-size: 1.25rem;
-            margin-bottom: 6px;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
             font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .insta-banner p {
-            font-size: 0.95rem;
-            margin-bottom: 14px;
+            font-size: 0.88rem;
+            margin-bottom: 10px;
             opacity: 0.95;
-            line-height: 1.5;
         }
 
         .insta-btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             background: white;
             color: #fd1d1d;
-            padding: 10px 20px;
-            border-radius: 30px;
+            padding: 8px 16px;
+            border-radius: 25px;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: transform 0.2s, background 0.2s;
-        }
-
-        .insta-btn:hover {
-            transform: scale(1.06);
-            background: #f8f9fa;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
         }
 
         .emergency-box {
             background: rgba(230, 57, 70, 0.15);
             border: 1px solid var(--primary-red);
-            border-radius: 12px;
-            padding: 18px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 15px;
             text-align: center;
         }
 
         .emergency-box h4 {
             color: var(--accent-yellow);
-            margin-bottom: 8px;
-            font-size: 1.05rem;
+            margin-bottom: 6px;
+            font-size: 1rem;
         }
 
         .emergency-box p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         /* Engine Warranty Rules Box */
         .engine-rule-box {
             background: rgba(255, 183, 3, 0.1);
             border: 2px solid var(--accent-yellow);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
         }
 
         .engine-rule-box h4 {
             color: var(--accent-yellow);
-            font-size: 1.15rem;
-            margin-bottom: 12px;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .engine-rule-box ul {
@@ -184,27 +189,27 @@
         }
 
         .engine-rule-box li {
-            font-size: 0.92rem;
+            font-size: 0.85rem;
             color: var(--text-light);
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: 6px;
         }
 
         .engine-rule-box li i {
             color: var(--primary-red);
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         .engine-warning-note {
             background: rgba(230, 57, 70, 0.2);
-            border-left: 4px solid var(--primary-red);
-            padding: 10px 12px;
+            border-left: 3px solid var(--primary-red);
+            padding: 8px 10px;
             border-radius: 4px;
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             color: #ff6b6b;
-            margin-top: 12px;
+            margin-top: 8px;
             font-weight: bold;
         }
 
@@ -212,21 +217,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 1rem;
+            gap: 6px;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.92rem;
             font-weight: bold;
             text-decoration: none;
             color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            margin-bottom: 10px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            margin-bottom: 8px;
             width: 100%;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
         }
 
         .btn-call { background-color: var(--primary-red); }
@@ -236,54 +236,54 @@
         .offer-box {
             background: var(--card-bg);
             border: 1px solid #333;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
         }
 
         .offer-title {
             color: var(--accent-yellow);
-            font-size: 1.2rem;
-            margin-bottom: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
             font-weight: bold;
         }
 
         .offer-img {
             width: 100%;
-            height: 220px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
         }
 
         .offer-desc {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
+            font-size: 0.88rem;
+            margin-bottom: 6px;
         }
 
         .section-title {
-            font-size: 1.2rem;
-            margin: 20px 0 12px 0;
+            font-size: 1.1rem;
+            margin: 15px 0 10px 0;
             color: var(--text-light);
             border-left: 4px solid var(--primary-red);
-            padding-left: 10px;
+            padding-left: 8px;
         }
 
         .services-grid {
             background: var(--card-bg);
             border: 1px solid #333;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
         }
 
         .service-item {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
+            font-size: 0.88rem;
+            margin-bottom: 8px;
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .service-item i {
@@ -294,64 +294,64 @@
         .reviews-box {
             background: var(--card-bg);
             border: 1px solid #333;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
         }
 
         .review-card {
             background: #121212;
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 12px;
+            padding: 10px 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
             border-left: 3px solid var(--accent-yellow);
         }
 
         .review-card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             font-style: italic;
         }
 
         .review-card span {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-light);
             font-weight: bold;
         }
 
         .form-container {
             background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
+            padding: 15px;
+            border-radius: 10px;
             border: 1px solid #333;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.85rem;
-            margin-bottom: 6px;
+            font-size: 0.82rem;
+            margin-bottom: 4px;
             color: var(--text-muted);
         }
 
         .form-control {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             background: #121212;
             border: 1px solid #444;
             border-radius: 6px;
             color: white;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         textarea.form-control {
             resize: vertical;
-            height: 80px;
+            height: 65px;
         }
 
         .btn-submit {
@@ -359,75 +359,59 @@
             background-color: var(--whatsapp-green);
             color: white;
             border: none;
-            padding: 12px;
+            padding: 10px;
             border-radius: 6px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .btn-submit:hover {
-            opacity: 0.9;
         }
 
         .map-section {
             background: var(--card-bg);
             border: 2px dashed var(--primary-red);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 15px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .map-section h4 {
             color: var(--accent-yellow);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            font-size: 1rem;
         }
 
         .map-section p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .address-box {
             background: var(--card-bg);
             border: 1px solid #333;
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 15px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .address-box h4 {
             color: var(--primary-red);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            font-size: 1rem;
         }
 
         .address-box p {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
+            padding: 15px;
+            font-size: 0.8rem;
             color: var(--text-muted);
-        }
-
-        /* Desktop Optimization */
-        @media (min-width: 768px) {
-            .container {
-                max-width: 750px;
-            }
-            .logo-area h1 {
-                font-size: 2.2rem;
-            }
-            .offer-img {
-                height: 280px;
-            }
         }
     </style>
 </head>
@@ -438,7 +422,7 @@
             <h1>MERAJ BIKE <span>REPAIRING CENTRE</span></h1>
             <div class="tagline">🛠️ Expert Engine & Technical Repair Services</div>
             <div class="header-badges">
-                <div class="time-badge"><i class="fa-solid fa-clock"></i> सुबह 7:00 से शाम 7:00 (सातों दिन खुली)</div>
+                <div class="time-badge"><i class="fa-solid fa-clock"></i> सुबह 7 से शाम 7 (सातों दिन खुली)</div>
                 <div class="location-badge"><i class="fa-solid fa-location-dot"></i> सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</div>
             </div>
         </div>
@@ -449,62 +433,68 @@
         <!-- 🔥 Instagram Views & Stats Banner -->
         <div class="insta-banner">
             <h3>🔥 6.5M+ Views in Last 30 Days</h3>
-            <p>हमारे टेक्निकल रील्स और रिपेयरिंग वीडियोज़ को इंस्टाग्राम पर भारी सफलता मिली है!<br>एक अकेले वीडियो पर <strong>4.5 Million+ Views</strong> हैं।</p>
+            <p>हमारे टेक्निकल रील्स और रिपेयरिंग वीडियोज़ को इंस्टाग्राम पर भारी सफलता मिली है! (एक वीडियो पर 4.5M+ Views)</p>
             <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="insta-btn">
                 <i class="fa-brands fa-instagram"></i> Instagram पर जुड़ें (@meraj_bike_mechanic)
             </a>
         </div>
 
-        <!-- Emergency Help Box -->
-        <div class="emergency-box">
-            <h4>⚠️ तुरंत क्या करें?</h4>
-            <p>अपनी लाइव लोकेशन और गाड़ी की समस्या सीधे WhatsApp पर भेजें, या तुरंत कॉल करें ताकि हम आपकी मदद के लिए जल्दी पहुँच सकें।</p>
-            <a href="tel:8130585587" class="btn btn-call">
-                <i class="fa-solid fa-phone"></i> इमर्जेंसी कॉल करें: 8130585587
-            </a>
-            <a href="https://wa.me/918130585587?text=नमस्ते%20मेरज%20बाइक%20मैकेनिक,%20मुझे%20इमर्जेंसी%20मदद%20चाहिए।" class="btn btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp पर लोकेशन और मदद भेजें
-            </a>
-        </div>
+        <!-- Grid for Emergency & Rules (Compact Side-by-Side on Laptop/Tablet) -->
+        <div class="grid-2">
+            <!-- Emergency Help Box -->
+            <div class="emergency-box">
+                <h4>⚠️ तुरंत क्या करें?</h4>
+                <p>अपनी लाइव लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
+                <a href="tel:8130585587" class="btn btn-call">
+                    <i class="fa-solid fa-phone"></i> इमर्जेंसी कॉल: 8130585587
+                </a>
+                <a href="https://wa.me/918130585587?text=नमस्ते%20मेरज%20बाइक%20मैकेनिक,%20मुझे%20इमर्जेंसी%20मदद%20चाहिए।" class="btn btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp पर लोकेशन भेजें
+                </a>
+            </div>
 
-        <!-- ⚠️ Engine Warranty & Rules Box (New) -->
-        <div class="engine-rule-box">
-            <h4><i class="fa-solid fa-triangle-exclamation"></i> इंजन रीबिल्डिंग / काम के विशेष नियम एवं शर्तें</h4>
-            <ul>
-                <li><i class="fa-solid fa-circle-chevron-right"></i> <strong>शुरुआती 500 KM:</strong> इंजन का काम होने के बाद पहले 500 किलोमीटर तक गाड़ी हमेशा <strong>सिंगल सवारी</strong> चलाएं और ज्यादा रेस न दें।</li>
-                <li><i class="fa-solid fa-circle-chevron-right"></i> <strong>मोबिल (Engine Oil) बदलना:</strong> ठीक 500 किलोमीटर पूरा होने पर दुकान पर आकर इंजन ऑयल बदलवाना अनिवार्य है।</li>
-            </ul>
-            <div class="engine-warning-note">
-                ⚠️ चेतावनी: 500 KM के बाद समय पर इंजन ऑयल न बदलवाने पर या नियम तोड़ने से गाड़ी में धुआं आने या इंजन सीज होने पर दुकान की कोई जिम्मेदारी नहीं होगी।
+            <!-- ⚠️ Engine Warranty & Rules Box -->
+            <div class="engine-rule-box">
+                <h4><i class="fa-solid fa-triangle-exclamation"></i> इंजन काम के विशेष नियम</h4>
+                <ul>
+                    <li><i class="fa-solid fa-circle-chevron-right"></i> <strong>शुरुआती 500 KM:</strong> गाड़ी हमेशा <strong>सिंगल सवारी</strong> चलाएं और ज्यादा रेस न दें।</li>
+                    <li><i class="fa-solid fa-circle-chevron-right"></i> <strong>मोबिल बदलना:</strong> ठीक 500 KM पर दुकान आकर इंजन ऑयल बदलना अनिवार्य है।</li>
+                </ul>
+                <div class="engine-warning-note">
+                    ⚠️ नियम न मानने पर धुआं देने या इंजन सीज होने पर जिम्मेदारी दुकान की नहीं होगी।
+                </div>
             </div>
         </div>
 
-        <!-- Special Offer Box -->
-        <div class="offer-box">
-            <div class="offer-title">💡 स्पेशल ऑफर</div>
-            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="LED Bulb" class="offer-img">
-            <p class="offer-desc"><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ)।</p>
-            <p style="font-size: 0.9rem; color: #25d366;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
-        </div>
+        <!-- Grid for Offer & Services -->
+        <div class="grid-2">
+            <!-- Special Offer Box -->
+            <div class="offer-box">
+                <div class="offer-title">💡 स्पेशल ऑफर</div>
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="LED Bulb" class="offer-img">
+                <p class="offer-desc"><strong>CYT LED High Quality Bulb:</strong> बाहर ₹500, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ)।</p>
+                <p style="font-size: 0.85rem; color: #25d366;">✅ तेज़ रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
+            </div>
 
-        <!-- Services Section -->
-        <h3 class="section-title">🛠️ हमारी मुख्य सेवाएँ</h3>
-        <div class="services-grid">
-            <div class="service-item"><i class="fa-solid fa-check"></i> क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</div>
-            <div class="service-item"><i class="fa-solid fa-check"></i> इंजन रिपेयरिंग और मेंटेनेंस</div>
-            <div class="service-item"><i class="fa-solid fa-check"></i> वायरिंग और इलेक्ट्रिकल काम</div>
-            <div class="service-item"><i class="fa-solid fa-check"></i> टायर और ब्रेक सर्विस</div>
+            <!-- Services Section -->
+            <div class="services-grid">
+                <h3 class="section-title" style="margin-top:0; font-size: 1.1rem;">🛠️ हमारी मुख्य सेवाएँ</h3>
+                <div class="service-item"><i class="fa-solid fa-check"></i> क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</div>
+                <div class="service-item"><i class="fa-solid fa-check"></i> इंजन रिपेयरिंग और मेंटेनेंस</div>
+                <div class="service-item"><i class="fa-solid fa-check"></i> वायरिंग और इलेक्ट्रिकल काम</div>
+                <div class="service-item"><i class="fa-solid fa-check"></i> टायर और ब्रेक सर्विस</div>
+            </div>
         </div>
 
         <!-- Customer Reviews Section -->
         <div class="reviews-box">
-            <h4 style="color: var(--accent-yellow); margin-bottom: 12px;"><i class="fa-solid fa-star"></i> ग्राहकों के अनुभव (Customer Reviews)</h4>
+            <h4 style="color: var(--accent-yellow); margin-bottom: 8px; font-size: 1rem;"><i class="fa-solid fa-star"></i> ग्राहकों के अनुभव</h4>
             <div class="review-card">
-                <p>"मेरज भाई ने मेरी पल्सर का इंजन ऐसा बना दिया कि मज़ा आ गया! काम एकदम पक्का और सही दाम पर।"</p>
+                <p>"मेरज भाई ने पल्सर का इंजन ऐसा बना दिया कि मज़ा आ गया! काम एकदम पक्का।"</p>
                 <span>- राहुल कुमार (सरायरंजन)</span>
             </div>
             <div class="review-card">
-                <p>"अचानक रास्ते में बाइक बंद हो गई थी, WhatsApp पर लोकेशन भेजते ही भाई ने तुरंत मदद की। बेहतरीन सर्विस!"</p>
+                <p>"अचानक रास्ते में बाइक बंद होने पर भाई ने WhatsApp लोकेशन पर तुरंत मदद की।"</p>
                 <span>- अमित सिंह</span>
             </div>
         </div>
@@ -513,29 +503,33 @@
         <h3 class="section-title">📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
         <div class="form-container">
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-                <div class="form-group">
-                    <label>आपका नाम:</label>
-                    <input type="text" id="clientName" class="form-control" placeholder="अपना पूरा नाम लिखें" required>
+                <div class="grid-2" style="margin-bottom: 0;">
+                    <div class="form-group">
+                        <label>आपका नाम:</label>
+                        <input type="text" id="clientName" class="form-control" placeholder="अपना पूरा नाम लिखें" required>
+                    </div>
+                    <div class="form-group">
+                        <label>मोबाइल नंबर:</label>
+                        <input type="tel" id="clientPhone" class="form-control" placeholder="अपना फोन नंबर लिखें" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>मोबाइल नंबर:</label>
-                    <input type="tel" id="clientPhone" class="form-control" placeholder="अपना फोन नंबर लिखें" required>
-                </div>
-                <div class="form-group">
-                    <label>गाड़ी का नाम (Bike Model):</label>
-                    <input type="text" id="clientBike" class="form-control" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
-                </div>
-                <div class="form-group">
-                    <label>समस्या चुनें (Service/Problem Menu):</label>
-                    <select id="clientProblem" class="form-control" required>
-                        <option value="" disabled selected>-- बाइक की समस्या / काम चुनें --</option>
-                        <option value="क्वालिटी बाइक सर्विसिंग और ट्यूनिंग">क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</option>
-                        <option value="इंजन रिपेयरिंग और मेंटेनेंस">इंजन रिपेयरिंग और मेंटेनेंस</option>
-                        <option value="वायरिंग और इलेक्ट्रिकल काम">वायरिंग और इलेक्ट्रिकल काम</option>
-                        <option value="टायर और ब्रेक सर्विस">टायर और ब्रेक सर्विस</option>
-                        <option value="CYT LED बल्ब फिटिंग (₹350)">CYT LED बल्ब फिटिंग (₹350)</option>
-                        <option value="अन्य कोई काम या खराबी">अन्य कोई काम या खराबी</option>
-                    </select>
+                <div class="grid-2" style="margin-bottom: 0;">
+                    <div class="form-group">
+                        <label>गाड़ी का नाम (Bike Model):</label>
+                        <input type="text" id="clientBike" class="form-control" placeholder="जैसे: Splendor, Pulsar..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>समस्या चुनें (Problem Menu):</label>
+                        <select id="clientProblem" class="form-control" required>
+                            <option value="" disabled selected>-- समस्या / काम चुनें --</option>
+                            <option value="क्वालिटी बाइक सर्विसिंग और ट्यूनिंग">क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</option>
+                            <option value="इंजन रिपेयरिंग और मेंटेनेंस">इंजन रिपेयरिंग और मेंटेनेंस</option>
+                            <option value="वायरिंग और इलेक्ट्रिकल काम">वायरिंग और इलेक्ट्रिकल काम</option>
+                            <option value="टायर और ब्रेक सर्विस">टायर और ब्रेक सर्विस</option>
+                            <option value="CYT LED बल्ब फिटिंग (₹350)">CYT LED बल्ब फिटिंग (₹350)</option>
+                            <option value="अन्य कोई काम या खराबी">अन्य कोई काम या खराबी</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>अन्य विवरण (यदि कुछ और बताना हो):</label>
@@ -547,20 +541,21 @@
             </form>
         </div>
 
-        <!-- Live Location Map Button -->
-        <div class="map-section">
-            <h4>📍 दुकान की सटीक लाइव लोकेशन</h4>
-            <p>बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
-            <a href="https://maps.app.goo.gl/9KiYeWCz7pZY9J879" target="_blank" class="btn btn-map">
-                <i class="fa-solid fa-map-location-dot"></i> Google Maps पर नेविगेट करें
-            </a>
-        </div>
+        <!-- Map & Address Grid -->
+        <div class="grid-2">
+            <div class="map-section" style="margin-bottom:0;">
+                <h4>📍 दुकान की लाइव लोकेशन</h4>
+                <p style="margin-bottom: 8px;">सीधे दुकान पर पहुँचने के लिए क्लिक करें:</p>
+                <a href="https://maps.app.goo.gl/9KiYeWCz7pZY9J879" target="_blank" class="btn btn-map" style="margin-bottom:0;">
+                    <i class="fa-solid fa-map-location-dot"></i> Google Maps पर नेविगेट करें
+                </a>
+            </div>
 
-        <!-- Workshop Address -->
-        <div class="address-box">
-            <h4>📍 वर्कशॉप का पता (Workshop Address)</h4>
-            <p><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</strong></p>
-            <p style="color: var(--accent-yellow); font-size: 0.9rem; margin-top: 5px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            <div class="address-box" style="margin-bottom:0;">
+                <h4>📍 वर्कशॉप का पता</h4>
+                <p><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</strong></p>
+                <p style="color: var(--accent-yellow); font-size: 0.85rem; margin-top: 4px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            </div>
         </div>
 
     </div>
@@ -587,4 +582,4 @@
                           `🏍️ *गाड़ी का मॉडल:* ${bike}%0a` +
                           `🔧 *चुनी गई समस्या:* ${problem}%0a` +
                           `📝 *अन्य विवरण:* ${details ? details : 'कुछ नहीं'}%0a` +
-                    
+                          `-------------------------------------
