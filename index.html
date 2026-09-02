@@ -3,395 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meraj Bike Repairing Centre | समस्तीपुर</title>
+    <title>Meraj Bike Mechanic</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-red: #e63946;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #f8f9fa;
+            --text-muted: #b0b0b0;
+            --whatsapp-green: #25d366;
+            --instagram-pink: #e1306c;
+            --accent-yellow: #ffb703;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
-            background-color: #121212;
-            color: #e0e0e0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
             line-height: 1.6;
+            padding-bottom: 70px;
         }
+
         header {
-            background: linear-gradient(135deg, #ff4757, #ff6b81);
-            color: white;
-            padding: 35px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+            padding: 25px 15px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            border-bottom: 3px solid var(--primary-red);
         }
-        header h1 {
-            font-size: 30px;
-            margin-bottom: 6px;
+
+        .logo-area h1 {
+            font-size: 1.8rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        header p {
-            font-size: 16px;
-            opacity: 0.95;
-        }
-        
-        .page-wrapper {
-            max-width: 1100px;
-            margin: 25px auto;
-            padding: 0 20px;
+
+        .logo-area h1 span {
+            color: var(--primary-red);
         }
 
-        /* Clickable Instagram Milestone Banner */
-        .insta-banner-link {
-            text-decoration: none;
-            display: block;
-            margin-bottom: 25px;
+        .tagline {
+            font-size: 0.95rem;
+            color: var(--accent-yellow);
+            font-weight: 600;
+            margin-bottom: 10px;
         }
-        .insta-banner {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-            padding: 18px 20px;
+
+        .location-badge {
+            display: inline-block;
+            background: rgba(230, 57, 70, 0.2);
+            color: #ff6b6b;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--primary-red);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .social-proof {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
             border-radius: 12px;
+            padding: 15px;
             text-align: center;
-            font-size: 17px;
-            font-weight: bold;
-            box-shadow: 0 6px 15px rgba(220, 39, 67, 0.4);
-            transition: transform 0.2s, opacity 0.2s;
+            margin-bottom: 20px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
         }
-        .insta-banner:hover {
-            opacity: 0.95;
-            transform: translateY(-2px);
+
+        .social-proof i {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .social-proof h3 {
+            font-size: 1.1rem;
+            margin-bottom: 3px;
+        }
+
+        .social-proof p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .offer-box {
+            background: linear-gradient(135deg, #2a2a00, #403000);
+            border: 2px dashed var(--accent-yellow);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .offer-box h2 {
+            color: var(--accent-yellow);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .offer-box p {
+            font-size: 0.95rem;
+            color: #fff;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+            color: var(--text-light);
+            border-left: 4px solid var(--primary-red);
+            padding-left: 8px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 8px;
+        }
+
+        .service-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .service-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         .action-buttons {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        @media (min-width: 768px) {
-            .action-buttons {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-
-        .btn-call, .btn-whatsapp, .btn-insta, .btn-map {
+        .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 16px;
-            font-size: 17px;
+            gap: 10px;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 8px;
             color: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: transform 0.2s, opacity 0.2s;
-            text-align: center;
-        }
-        .btn-call { background-color: #25d366; }
-        .btn-whatsapp { background-color: #128c7e; }
-        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743); }
-        .btn-map { background-color: #ff4757; }
-
-        .btn-call:hover, .btn-whatsapp:hover, .btn-insta:hover, .btn-map:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-        }
+        .btn-whatsapp { background-color: var(--whatsapp-green); }
+        .btn-map { background-color: #4285F4; }
+        .btn-insta { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #fd1d1d, #fcb045); }
+        .btn-call { background-color: var(--primary-red); }
 
-        @media (min-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .full-width {
-                grid-column: span 2;
-            }
-        }
-
-        .card {
-            background-color: #1e1e1e;
+        .form-container {
+            background: var(--card-bg);
+            padding: 20px;
             border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-            border-left: 5px solid #ff4757;
-        }
-        .card h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: #ff6b81;
-            border-bottom: 2px solid #2c2c2c;
-            padding-bottom: 10px;
-        }
-        .offer-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #444;
-        }
-        .service-list {
-            list-style: none;
-        }
-        .service-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #2c2c2c;
-            font-size: 17px;
-        }
-        .service-list li:last-child {
-            border-bottom: none;
-        }
-        .form-group {
-            margin-bottom: 18px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            color: #ff6b81;
-            font-weight: bold;
-            font-size: 15px;
-        }
-        .form-group input[type="text"], 
-        .form-group input[type="tel"], 
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            background-color: #2c2c2c;
-            border: 1px solid #444;
-            color: white;
-            border-radius: 8px;
-            font-size: 16px;
-        }
-        .form-group select option {
-            background-color: #2c2c2c;
-            color: white;
-        }
-        .btn-submit {
-            background-color: #25d366;
-            color: white;
-            border: none;
-            padding: 15px;
-            font-size: 17px;
-            font-weight: bold;
-            width: 100%;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .btn-submit:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-        }
-        .location-banner {
-            background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
-            border: 2px dashed #25d366;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-        }
-        .location-banner h2 {
-            color: #25d366;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        .btn-map-direct {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 14px 28px;
-            font-size: 17px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: background 0.3s, transform 0.2s;
-        }
-        .btn-map-direct:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-        }
-        .address-box {
-            background-color: #1e1e1e;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
             border: 1px solid #333;
+            margin-bottom: 20px;
         }
-        .address-box h3 {
-            color: #ff4757;
-            font-size: 22px;
+
+        .form-group {
             margin-bottom: 12px;
         }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+            color: var(--text-muted);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: #121212;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: white;
+            font-size: 0.95rem;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #1a1a1a;
+            display: flex;
+            border-top: 1px solid #333;
+            z-index: 1000;
+        }
+
+        .sticky-btn {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .sticky-whatsapp { background-color: #20ba5a; }
+        .sticky-call { background-color: var(--primary-red); }
+
         footer {
             text-align: center;
-            padding: 25px;
-            background-color: #0a0a0a;
-            color: #777;
-            font-size: 15px;
-            margin-top: 40px;
-            border-top: 1px solid #222;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Meraj Bike Repairing Centre</h1>
-        <p>आपकी बाइक की बेहतरीन सर्विस और रिपेयरिंग सेंटर</p>
+        <div class="logo-area">
+            <h1>Meraj Bike <span>Mechanic</span></h1>
+            <div class="tagline">🛠️ Expert Engine & Technical Repair Services</div>
+            <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Sarayranjan Road, Paroriya Jharulla Stan, Samastipur</div>
+        </div>
     </header>
 
-    <div class="page-wrapper">
-        
-        <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="insta-banner-link">
-            <div class="insta-banner">
-                🔥 6.5M+ Views in Last 30 Days | Instagram ID: @meraj_bike_mechanic (क्लिक करके फॉलो करें) 📸
-            </div>
-        </a>
+    <div class="container">
 
-        <div class="action-buttons">
-            <a href="tel:8130585587" class="btn-call">📞 तुरंत बात करें</a>
-            <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20अपनी%20बाइक%20की%20सर्विस/रिपेयरिंग%20करवानी%20है।" target="_blank" class="btn-whatsapp">💬 WhatsApp चैट</a>
-            <a href="https://www.instagram.com/meraj_bike_mechanic" target="_blank" class="btn-insta">📸 Instagram फॉलो करें</a>
-            <a href="https://maps.google.com/?q=Sarisaryan+Road,+Paroriya+Zharulla+Stan,+Samastipur,+Bihar+848124" target="_blank" class="btn-map">📍 गूगल मैप रास्ता</a>
+        <!-- Social Proof Banner -->
+        <div class="social-proof">
+            <i class="fa-brands fa-instagram"></i>
+            <h3>Trusted by 6.5M+ Monthly Viewers</h3>
+            <p>Watch our technical repair & parts tutorials on Instagram!</p>
         </div>
 
-        <div class="content-grid">
+        <!-- Special Offer Box -->
+        <div class="offer-box">
+            <h2>🔥 Special Offer!</h2>
+            <p>CYT LED Bulb available now in just <strong>₹350</strong> with fitting!</p>
+        </div>
 
-            <div class="card full-width" style="border-left: 5px solid #ff0055; background: linear-gradient(145deg, #1e1e1e, #261518);">
-                <h2 style="color: #ff3366; border-bottom: 2px solid #3a1c24;">🚨 इमरजेंसी / सड़क पर गाड़ी फंसने पर (Roadside Help)</h2>
-                <p style="font-size: 16px; margin-bottom: 15px; color: #f1f1f1;">
-                    सफर के दौरान अगर बीच रास्ते में कहीं भी आपकी बाइक अचानक खराब हो जाए, पंचर हो जाए या कोई बड़ी तकनीकी दिक्कत आ जाए, तो घबराएं नहीं! तुरंत मदद के लिए नीचे संपर्क करें:
-                </p>
-                <div style="background: rgba(255, 51, 102, 0.1); padding: 15px; border-radius: 8px; border: 1px dashed #ff3366; margin-bottom: 15px;">
-                    <p style="font-size: 15px; color: #ff99aa; margin-bottom: 8px;"><strong>⚠️ तुरंत क्या करें?</strong></p>
-                    <p style="font-size: 14px; color: #ccc;">अपनी लाइव लोकेशन और गाड़ी की समस्या सीधे WhatsApp पर भेजें, या तुरंत कॉल करें ताकि हम आपकी मदद के लिए जल्दी पहुँच सकें।</p>
+        <!-- Quick Action Buttons -->
+        <div class="action-buttons">
+            <a href="https://maps.app.goo.gl/9KiYeWCz7pZY9J879" target="_blank" class="btn btn-map">
+                <i class="fa-solid fa-map-location-dot"></i> Get Directions (Google Map)
+            </a>
+            <a href="https://instagram.com/meraj_bike_mechanic" target="_blank" class="btn btn-insta">
+                <i class="fa-brands fa-instagram"></i> Follow on Instagram (@meraj_bike_mechanic)
+            </a>
+            <a href="tel:919900000000" class="btn btn-call">
+                <i class="fa-solid fa-phone"></i> Call Emergency Roadside Help
+            </a>
+        </div>
+
+        <!-- Services Section -->
+        <h3 class="section-title">Our Expert Services</h3>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-gears"></i>
+                <h4>Engine Tuning</h4>
+                <p>Complete overhaul & performance check</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h4>Electrical & LED</h4>
+                <p>Wiring, battery & CYT LED setups</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-truck-pickup"></i>
+                <h4>Roadside Help</h4>
+                <p>Emergency breakdown assistance</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-wrench"></i>
+                <h4>General Service</h4>
+                <p>Oil change, brakes & tuning</p>
+            </div>
+        </div>
+
+        <!-- WhatsApp Booking Form -->
+        <h3 class="section-title">Book Service / Inquiry</h3>
+        <div class="form-container">
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="clientName" class="form-control" placeholder="Enter your name" required>
                 </div>
-                <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
-                    <a href="tel:8130585587" style="display: block; background-color: #ff3366; color: white; text-align: center; padding: 15px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-                        🚨 इमरजेंसी कॉल करें: 8130585587
-                    </a>
-                    <a href="https://wa.me/918130585587?text=जरूरी मदद चाहिए! मेरी बाइक रास्ते में फंस गई है। कृपया तुरंत सहायता करें।" target="_blank" style="display: block; background-color: #25d366; color: white; text-align: center; padding: 15px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-                        📍 WhatsApp पर लोकेशन और मदद भेजें
-                    </a>
+                <div class="form-group">
+                    <label>Bike Model / Problem</label>
+                    <input type="text" id="clientProblem" class="form-control" placeholder="e.g. Splendor - Engine tuning / LED bulb" required>
                 </div>
-            </div>
-
-            <div class="card">
-                <h2>💡 स्पेशल ऑफर</h2>
-                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="Bike Repairing" class="offer-img">
-                <p><strong>CYT LED High Quality Bulb:</strong> गाड़ियों के लिए बेस्ट CYT एलईडी बल्ब बाहर ₹500 में मिलता है, यहाँ मात्र <strong>₹350</strong> में (फिटिंग के साथ!)।</p>
-                <p style="margin-top: 12px; color: #25d366; font-weight: bold;">✅ तेज़ और दमदार रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
-            </div>
-
-            <div class="card">
-                <h2>🛠️ हमारी मुख्य सेवाएँ</h2>
-                <ul class="service-list">
-                    <li>🔧 कंपलीट बाइक सर्विसिंग और ट्यूनिंग</li>
-                    <li>⚙️ इंजन रिपेयरिंग और मेंटेनेंस</li>
-                    <li>💡 वायरिंग और इलेक्ट्रिकल काम</li>
-                    <li>🛞 टायर और ब्रेक सर्विस</li>
-                </ul>
-            </div>
-
-            <div class="card full-width">
-                <h2>📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h2>
-                <p style="font-size: 14px; color: #aaa; margin-bottom: 20px;">अपनी डिटेल्स भरकर सीधे WhatsApp पर बुकिंग भेजें:</p>
-                
-                <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-                    <div class="content-grid" style="gap: 0 20px;">
-                        <div class="form-group">
-                            <label for="name">आपका नाम:</label>
-                            <input type="text" id="name" placeholder="अपना पूरा नाम लिखें" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">मोबाइल नंबर:</label>
-                            <input type="tel" id="phone" placeholder="अपना फोन नंबर लिखें" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="bike-model">गाड़ी का नाम (Bike Model):</label>
-                            <input type="text" id="bike-model" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service-choice">समस्या / क्या काम कराना है?:</label>
-                            <select id="service-choice" required>
-                                <option value="" disabled selected>-- सूची में से समस्या चुनें --</option>
-                                <option value="जनरल सर्विस (General Service)">🛠️ जनरल सर्विस करवानी है</option>
-                                <option value="इंजन का काम (Engine Repairing)">⚙️ इंजन का काम करवाना है</option>
-                                <option value="वायरिंग समस्या (Wiring Work)">💡 वायरिंग की समस्या है</option>
-                                <option value="इंजन ऑयल बदलना (Engine Oil Change)">🛢️ इंजन ऑयल बदलना है</option>
-                                <option value="ब्रेक और टायर सर्विस (Break & Tyre)">🛞 ब्रेक या टायर की समस्या है</option>
-                                <option value="CYT LED बल्ब लगवाना - ₹350">💡 CYT LED बल्ब लगवाना है (₹350)</option>
-                                <option value="अन्य समस्या / पूछताछ के लिए">💬 अन्य समस्या / पूछताछ करनी है</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">अन्य कोई खास दिक्कत (Details):</label>
-                        <textarea id="message" rows="3" placeholder="गाड़ी में और क्या दिक्कत आ रही है, विस्तार से लिखें..."></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-submit">💬 WhatsApp पर बुकिंग भेजें</button>
-                </form>
-            </div>
-
-            <div class="location-banner full-width">
-                <h2>📍 दुकान की सटीक लाइव लोकेशन</h2>
-                <p style="font-size: 15px; color: #ccc; margin-top: 5px;">बिना भटके सीधे हमारी दुकान पर पहुँचने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
-                <a href="https://maps.google.com/?q=Sarisaryan+Road,+Paroriya+Zharulla+Stan,+Samastipur,+Bihar+848124" target="_blank" class="btn-map-direct">
-                    🗺️ Google Maps पर नेविगेट करें
-                </a>
-            </div>
-
-            <div class="address-box full-width">
-                <h3>📍 वर्कशॉप का पता (Workshop Address)</h3>
-                <p style="font-size: 18px;"><strong>सरायरंजन रोड, परोरिया झरुल्ला स्थान</strong><br>जिला: समस्तीपुर, बिहार - 848124</p>
-                <p style="margin-top: 12px; color: #ff6b81; font-weight: bold; font-size: 16px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
-            </div>
-
+                <button type="submit" class="btn-submit">
+                    <i class="fa-brands fa-whatsapp"></i> Send Booking to WhatsApp
+                </button>
+            </form>
         </div>
 
     </div>
 
+    <!-- Sticky Bottom Bar -->
+    <div class="sticky-bar">
+        <a href="https://wa.me/919900000000?text=Hello%20Meraj%20Bike%20Mechanic,%20I%20want%20to%20inquire%20about%20bike%20service." class="sticky-btn sticky-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </a>
+        <a href="tel:919900000000" class="sticky-btn sticky-call">
+            <i class="fa-solid fa-phone-volume"></i> Emergency Call
+        </a>
+    </div>
+
     <footer>
-        <p>© 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
+        <p>&copy; 2026 Meraj Bike Mechanic. All Rights Reserved.</p>
     </footer>
 
     <script>
         function sendToWhatsApp(event) {
             event.preventDefault();
+            let name = document.getElementById('clientName').value;
+            let problem = document.getElementById('clientProblem').value;
             
-            let name = document.getElementById('name').value;
-            let phone = document.getElementById('phone').value;
-            let bike = document.getElementById('bike-model').value;
-            let service = document.getElementById('service-choice').value;
-            let msg = document.getElementById('message').value;
+            let phoneNumber = "919900000000"; 
+            let message = `Hello Meraj Bike Mechanic,%0aMy Name: ${name}%0aProblem/Service: ${problem}`;
             
-            let whatsappNumber = "918130585587";
-            
-            let text = `नमस्कार, मुझे अपनी बाइक की सर्विस करवानी है।\n\n*नाम:* ${name}\n*मोबाइल:* ${phone}\n*गाड़ी:* ${bike}\n*चुनी गई समस्या/काम:* ${service}\n*अन्य विवरण:* ${msg}`;
-            
-            let encodedText = encodeURIComponent(text);
-            let whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-            
+            let whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(whatsappUrl, '_blank');
         }
     </script>
 
 </body>
-                </html>
+    </html>
                     
