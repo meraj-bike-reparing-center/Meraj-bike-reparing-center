@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraj Bike Repairing Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+        .emergency-banner {
+            background: #ff4757;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 10px rgba(255, 71, 87, 0.4);
+        }
+        .btn-call, .btn-wa {
+            background: #ffffff;
+            color: #222;
+            padding: 8px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.3s;
+        }
+        .btn-wa {
+            background: #25d366;
+            color: white;
+        }
+        .btn-call:hover, .btn-wa:hover {
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .card {
+            background: #161e2e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            border: 1px solid #2a3748;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: #f3f4f6;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            background: #0b0f19;
+            border: 1px solid #374151;
+            border-radius: 8px;
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+        input:focus, select:focus {
+            border-color: #25d366;
+        }
+        .submit-btn {
+            background: #25d366;
+            color: white;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background: #20ba5a;
+        }
+        .reels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .reel-box {
+            background: #1f2937;
+            padding: 12px 8px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            border: 1px solid #374151;
+            transition: 0.3s;
+        }
+        .reel-box:hover {
+            background: #374151;
+            border-color: #ff4757;
+        }
+        .insta-banner {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+            transition: 0.3s;
+        }
+        .insta-banner:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        .brands-row {
+            display: flex;
+            justify-content: space-around;
+            background: #1f2937;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #60a5fa;
+        }
+        .service-box {
+            background: #1f2937;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13px;
+            border: 1px solid #374151;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+        .service-box i {
+            font-size: 20px;
+            color: #38bdf8;
+        }
+        .services-grid-main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .rating {
+            text-align: center;
+            color: #fbbf24;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .map-box {
+            width: 100%;
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #374151;
+            margin-top: 10px;
+        }
+        .map-box iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .address-box {
+            background: #1f2937;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #ff4757;
+        }
+        @media (max-width: 480px) {
+            .services-grid-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .reels-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- इमरजेंसी बैनर -->
+    <div class="emergency-banner">
+        <span><i class="fa-solid fa-triangle-exclamation"></i> फंसा न करो! इमरजेंसी हेल्प के लिए तुरंत संपर्क करें:</span>
+        <div>
+            <a href="tel:918130585587" class="btn-call"><i class="fa-solid fa-phone"></i> अर्जेंट कॉल करें</a>
+            <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Ji,%20meri%20bike%20kharab%20ho%20gayi%20hai." class="btn-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp मदद</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- ऑनलाइन बुकिंग फॉर्म -->
+        <div class="card">
+            <h2><i class="fa-solid fa-calendar-days" style="color: #25d366;"></i> ऑनलाइन बाइक सर्विस बुक करें</h2>
+            <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-group">
+                    <label>आपका नाम:</label>
+                    <input type="text" id="name" placeholder="अपना पूरा नाम लिखें" required>
+                </div>
+                <div class="form-group">
+                    <label>मोबाइल नंबर:</label>
+                    <input type="tel" id="phone" placeholder="10 अंकों का नंबर लिखें" required>
+                </div>
+                <div class="form-group">
+                    <label>बाइक का नाम/मॉडल:</label>
+                    <input type="text" id="bike" placeholder="उदा. Splendor, Pulsar, Activa" required>
+                </div>
+                <div class="form-group">
+                    <label>सविर्स का प्रकार:</label>
+                    <select id="serviceType">
+                        <option value="फुल सर्विसिंग">फुल सर्विसिंग</option>
+                        <option value="इंजन रिपेयर">इंजन रिपेयर</option>
+                        <option value="बैटरी चार्जिंग">बैटरी चार्जिंग</option>
+                        <option value="पंचर बनवाना">पंचर बनवाना</option>
+                        <option value="अन्य काम">अन्य काम</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp पर बुकिंग भेजें</button>
+            </form>
+        </div>
+
+        <!-- वायरल रील्स सेक्शन -->
+        <div class="card">
+            <h2>🔥 हमारी वायरल रील्स (डायरेक्ट वीडियो देखें)</h2>
+            <div class="reels-grid">
+                <a href="https://instagram.com" class="reel-box" target="_blank">
+                    <i class="fa-solid fa-video" style="color:#ff4757; font-size:16px;"></i><br>
+                    <strong>रील 1</strong><br><span style="color:#25d366;">1 Million+ Views</span>
+                </a>
+                <a href="https://instagram.com" class="reel-box" target="_blank">
+                    <i class="fa-solid fa-video" style="color:#f59e0b; font-size:16px;"></i><br>
+                    <strong>रील 2</strong><br><span style="color:#f59e0b;">Popular Video</span>
+                </a>
+                <a href="https://instagram.com" class="reel-box" target="_blank">
+                    <i class="fa-solid fa-video" style="color:#38bdf8; font-size:16px;"></i><br>
+                    <strong>रील 3</strong><br><span style="color:#38bdf8;">Trending Video</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- इंस्टाग्राम प्रोफाइल -->
+        <div class="card" style="padding: 10px; background: transparent; border: none; box-shadow: none;">
+            <a href="https://instagram.com" class="insta-banner" target="_blank">
+                <i class="fa-brands fa-instagram" style="font-size: 24px;"></i><br>
+                Instagram Main Profile<br>
+                <span style="font-size: 12px; font-weight: normal;">हमारी सभी नई रील्स और बाइक रिपेयरिंग की पूरी प्रोफ़ाइल देखने के लिए यहाँ क्लिक करें</span>
+            </a>
+        </div>
+
+        <!-- कंपनियों के नाम -->
+        <div class="card">
+            <h2>सभी कंपनियों की बाइकों का काम होता है</h2>
+            <div class="brands-row">
+                <span>TVS</span>
+                <span>HONDA</span>
+                <span>HERO</span>
+                <span>BAJAJ</span>
+            </div>
+        </div>
+
+        <!-- मुख्य सेवाएँ -->
+        <div class="card">
+            <h2>हमारी मुख्य सेवाएँ</h2>
+            <div class="services-grid-main">
+                <div class="service-box"><i class="fa-solid fa-gears"></i> इंजन रिपेयर</div>
+                <div class="service-box"><i class="fa-solid fa-wrench"></i> फुल सर्विसिंग</div>
+                <div class="service-box"><i class="fa-solid fa-cogs"></i> गियर बॉक्स रिपेयर</div>
+                <div class="service-box"><i class="fa-solid fa-car-battery"></i> बैटरी चार्जिंग</div>
+                <div class="service-box"><i class="fa-solid fa-circle-exclamation"></i> ब्रेक सर्विस</div>
+                <div class="service-box"><i class="fa-solid fa-tire"></i> टायर पंचर</div>
+                <div class="service-box"><i class="fa-solid fa-oil-can"></i> ऑयल बदलना</div>
+                <div class="service-box"><i class="fa-solid fa-screwdriver-wrench"></i> स्पेयर पार्ट्स</div>
+            </div>
+        </div>
+
+        <!-- रेटिंग कार्ड -->
+        <div class="card" style="text-align: center;">
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p style="font-size: 13px; color: #9ca3af;">"समस्तीपुर के 5,000+ संतुष्ट ग्राहक हमारे काम और गुणवत्ता पर भरोसा करते हैं।"</p>
+        </div>
+
+        <!-- गूगल मैप और पता -->
+        <div class="card">
+            <h2>📍 Google Map पर हमारी वर्कशॉप</h2>
+            <div class="map-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5!2d85.78!3d25.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDUxJzAwLjAiTiA4NcKwNDcnNDguMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <br>
+            <div class="address-box">
+                <strong style="color: #ff4757; font-size: 16px;"><i class="fa-solid fa-location-dot"></i> पता (Workshop Address)</strong>
+                <p style="font-size: 14px; margin-top: 5px; color: #e5e7eb;">सरायरंजन रोड, परोरिया झरुल्ला स्थान<br>जिला: समस्तीपुर, बिहार - 848124</p>
+                <p style="color: #25d366; font-weight: bold; margin-top: 8px; font-size: 14px;">सही काम, सही दाम (पूरी गारंटी के साथ)</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+            let bike = document.getElementById('bike').value;
+            let service = document.getElementById('serviceType').value;
+
+            let ownerWhatsApp = "918130585587"; 
+
+            let message = `Hello Meraj Bike Repairing Center,%0A%0A*नई सर्विस बुकिंग आई है:*%0A👤 नाम: ${name}%0A📞 मोबाइल: ${phone}%0A🏍️ बाइक: ${bike}%0A🛠️ सर्विस: ${service}`;
+
+            let url = `https://wa.me/${ownerWhatsApp}?text=${message}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
