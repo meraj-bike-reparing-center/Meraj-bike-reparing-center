@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meraj Bike Repairing Centre</title>
-    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -93,7 +92,6 @@
             padding: 0 10px;
         }
 
-        /* Grid layout for compact look */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr;
@@ -210,6 +208,41 @@
             font-size: 0.82rem;
             color: #ff6b6b;
             margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* Genuine Parts Policy Box (New) */
+        .parts-policy-box {
+            background: rgba(37, 211, 102, 0.1);
+            border: 2px solid var(--whatsapp-green);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .parts-policy-box h4 {
+            color: var(--whatsapp-green);
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .parts-policy-box p {
+            font-size: 0.87rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .parts-highlight {
+            background: rgba(37, 211, 102, 0.2);
+            border-left: 3px solid var(--whatsapp-green);
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-size: 0.83rem;
+            color: #25d366;
             font-weight: bold;
         }
 
@@ -430,7 +463,6 @@
 
     <div class="container">
 
-        <!-- 🔥 Instagram Views & Stats Banner -->
         <div class="insta-banner">
             <h3>🔥 6.5M+ Views in Last 30 Days</h3>
             <p>हमारे टेक्निकल रील्स और रिपेयरिंग वीडियोज़ को इंस्टाग्राम पर भारी सफलता मिली है! (एक वीडियो पर 4.5M+ Views)</p>
@@ -439,9 +471,7 @@
             </a>
         </div>
 
-        <!-- Grid for Emergency & Rules (Compact Side-by-Side on Laptop/Tablet) -->
         <div class="grid-2">
-            <!-- Emergency Help Box -->
             <div class="emergency-box">
                 <h4>⚠️ तुरंत क्या करें?</h4>
                 <p>अपनी लाइव लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
@@ -453,7 +483,6 @@
                 </a>
             </div>
 
-            <!-- ⚠️ Engine Warranty & Rules Box -->
             <div class="engine-rule-box">
                 <h4><i class="fa-solid fa-triangle-exclamation"></i> इंजन काम के विशेष नियम</h4>
                 <ul>
@@ -466,9 +495,7 @@
             </div>
         </div>
 
-        <!-- Grid for Offer & Services -->
         <div class="grid-2">
-            <!-- Special Offer Box -->
             <div class="offer-box">
                 <div class="offer-title">💡 स्पेशल ऑफर</div>
                 <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=600&auto=format&fit=crop&q=60" alt="LED Bulb" class="offer-img">
@@ -476,17 +503,23 @@
                 <p style="font-size: 0.85rem; color: #25d366;">✅ तेज़ रोशनी | ✅ तुरंत दुकान पर फिटिंग</p>
             </div>
 
-            <!-- Services Section -->
-            <div class="services-grid">
-                <h3 class="section-title" style="margin-top:0; font-size: 1.1rem;">🛠️ हमारी मुख्य सेवाएँ</h3>
-                <div class="service-item"><i class="fa-solid fa-check"></i> क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> इंजन रिपेयरिंग और मेंटेनेंस</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> वायरिंग और इलेक्ट्रिकल काम</div>
-                <div class="service-item"><i class="fa-solid fa-check"></i> टायर और ब्रेक सर्विस</div>
+            <div class="parts-policy-box">
+                <h4><i class="fa-solid fa-shield-halved"></i> ओरिजिनल पार्ट्स एवं फिटिंग नियम</h4>
+                <p>हम Hero और अन्य कंपनियों के 100% ओरिजिनल पार्ट्स उपलब्ध कराते हैं। होलसेलर से ओरिजिनल सामान पर मात्र 10% कमीशन मिलता है।</p>
+                <div class="parts-highlight">
+                    🔧 ओरिजिनल पार्ट्स लगवाने पर एमआरपी (MRP) मूल्य से <strong>₹100 से ₹150 एक्स्ट्रा फिटिंग/लेबर चार्ज</strong> लिया जाएगा।
+                </div>
             </div>
         </div>
 
-        <!-- Customer Reviews Section -->
+        <h3 class="section-title">🛠️ हमारी मुख्य सेवाएँ</h3>
+        <div class="services-grid">
+            <div class="service-item"><i class="fa-solid fa-check"></i> क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</div>
+            <div class="service-item"><i class="fa-solid fa-check"></i> इंजन रिपेयरिंग और मेंटेनेंस</div>
+            <div class="service-item"><i class="fa-solid fa-check"></i> वायरिंग और इलेक्ट्रिकल काम</div>
+            <div class="service-item"><i class="fa-solid fa-check"></i> टायर और ब्रेक सर्विस</div>
+        </div>
+
         <div class="reviews-box">
             <h4 style="color: var(--accent-yellow); margin-bottom: 8px; font-size: 1rem;"><i class="fa-solid fa-star"></i> ग्राहकों के अनुभव</h4>
             <div class="review-card">
@@ -499,7 +532,6 @@
             </div>
         </div>
 
-        <!-- Online Booking Form -->
         <h3 class="section-title">📝 ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
         <div class="form-container">
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
@@ -522,6 +554,7 @@
                         <label>समस्या चुनें (Problem Menu):</label>
                         <select id="clientProblem" class="form-control" required>
                             <option value="" disabled selected>-- समस्या / काम चुनें --</option>
+                            <option value="ओरिजिनल पार्ट्स फिटिंग (MRP + ₹100-150 लेबर चार्ज)">ओरिजिनल पार्ट्स फिटिंग (MRP + ₹100-150 लेबर चार्ज)</option>
                             <option value="क्वालिटी बाइक सर्विसिंग और ट्यूनिंग">क्वालिटी बाइक सर्विसिंग और ट्यूनिंग</option>
                             <option value="इंजन रिपेयरिंग और मेंटेनेंस">इंजन रिपेयरिंग और मेंटेनेंस</option>
                             <option value="वायरिंग और इलेक्ट्रिकल काम">वायरिंग और इलेक्ट्रिकल काम</option>
@@ -541,7 +574,6 @@
             </form>
         </div>
 
-        <!-- Map & Address Grid -->
         <div class="grid-2">
             <div class="map-section" style="margin-bottom:0;">
                 <h4>📍 दुकान की लाइव लोकेशन</h4>
@@ -565,21 +597,4 @@
     </footer>
 
     <script>
-        function sendToWhatsApp(event) {
-            event.preventDefault();
-            let name = document.getElementById('clientName').value;
-            let phone = document.getElementById('clientPhone').value;
-            let bike = document.getElementById('clientBike').value;
-            let problem = document.getElementById('clientProblem').value;
-            let details = document.getElementById('clientDetails').value;
-            
-            let phoneNumber = "918130585587"; 
-            
-            let message = `🛠️ *नया सर्विस बुकिंग अनुरोध - Meraj Bike Repairing Centre*%0a` +
-                          `----------------------------------------%0a` +
-                          `👤 *ग्राहक का नाम:* ${name}%0a` +
-                          `📞 *मोबाइल नंबर:* ${phone}%0a` +
-                          `🏍️ *गाड़ी का मॉडल:* ${bike}%0a` +
-                          `🔧 *चुनी गई समस्या:* ${problem}%0a` +
-                          `📝 *अन्य विवरण:* ${details ? details : 'कुछ नहीं'}%0a` +
-                          `-------------------------------------
+        function sendToWhats
