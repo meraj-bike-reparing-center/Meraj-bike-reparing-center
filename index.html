@@ -42,21 +42,33 @@
             background-color: #25d366;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 16px;
             font-size: 20px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 8px;
             margin-bottom: 15px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: 0.3s;
+        }
+        .btn-whatsapp {
+            display: block;
+            background-color: #128c7e;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         .btn-map {
             display: block;
             background-color: #ff4757;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 16px;
             font-size: 18px;
             font-weight: bold;
             text-decoration: none;
@@ -88,63 +100,26 @@
         .service-list li:last-child {
             border-bottom: none;
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #ff6b81;
-            font-weight: bold;
-        }
-        .form-group input[type="text"], 
-        .form-group input[type="tel"], 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            background-color: #2c2c2c;
-            border: 1px solid #444;
-            color: white;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-        .checkbox-group {
+        .whatsapp-options {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 5px;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 15px;
         }
-        .checkbox-label {
-            background-color: #2c2c2c;
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border: 1px solid #444;
-        }
-        .checkbox-label input {
-            accent-color: #ff4757;
-            width: 18px;
-            height: 18px;
-        }
-        .btn-submit {
+        .wa-opt-btn {
             background-color: #25d366;
             color: white;
-            border: none;
-            padding: 14px 20px;
-            font-size: 16px;
+            padding: 12px 15px;
+            text-align: center;
+            text-decoration: none;
             font-weight: bold;
-            width: 100%;
             border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-top: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            font-size: 16px;
+            display: block;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: 0.2s;
         }
-        .btn-submit:hover {
+        .wa-opt-btn:hover {
             background-color: #20ba5a;
         }
         .address-box {
@@ -177,10 +152,14 @@
 
     <div class="container">
         
-        <a href="tel:8130585587" class="btn-call">📞 कॉल करें: 8130585587</a>
+        <a href="tel:8130585587" class="btn-call">📞 डायरेक्ट कॉल करें: 8130585587</a>
+
+        <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20अपनी%20बाइक%20की%20सर्विस/रिपेयरिंग%20वानी%20है।" target="_blank" class="btn-whatsapp">
+            💬 WhatsApp पर चैट करें
+        </a>
 
         <a href="https://maps.app.goo.gl/T8m9derXNJBYNd116" target="_blank" class="btn-map">
-            📍 गूगल मैप पर दुकान का रास्ता देखें (Click Here)
+            📍 गूगल मैप पर दुकान का रास्ता देखें
         </a>
 
         <div class="card">
@@ -200,42 +179,26 @@
         </div>
 
         <div class="card">
-            <h2>📝 WhatsApp पर सर्विस बुकिंग करें</h2>
-            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-                <div class="form-group">
-                    <label for="name">आपका नाम:</label>
-                    <input type="text" id="name" placeholder="अपना पूरा नाम लिखें" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">मोबाइल नंबर:</label>
-                    <input type="tel" id="phone" placeholder="अपना फोन नंबर लिखें" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="bike-model">गाड़ी का नाम (Bike Model):</label>
-                    <input type="text" id="bike-model" placeholder="जैसे: Splendor, Passion, Pulsar..." required>
-                </div>
-
-                <div class="form-group">
-                    <label>क्या काम करवाना है / क्या समस्या है? (विकल्प चुनें):</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label"><input type="checkbox" name="service" value="जनरल सर्विस"> जनरल सर्विस</label>
-                        <label class="checkbox-label"><input type="checkbox" name="service" value="इंजन का काम"> इंजन का काम</label>
-                        <label class="checkbox-label"><input type="checkbox" name="service" value="वायरिंग समस्या"> वायरिंग समस्या</label>
-                        <label class="checkbox-label"><input type="checkbox" name="service" value="इंजन ऑयल"> इंजन ऑयल बदलना</label>
-                        <label class="checkbox-label"><input type="checkbox" name="service" value="ब्रेक/टायर"> ब्रेक या टायर काम</label>
-                        <label class="checkbox-label"><input type="checkbox" name="service" value="LED बल्ब"> CYT एलईडी बल्ब</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">अन्य कोई खास दिक्कत (Details):</label>
-                    <textarea id="message" rows="3" placeholder="गाड़ी में और क्या दिक्कत आ रही है, यहाँ विस्तार से लिखें..."></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">💬 WhatsApp पर बुकिंग भेजें</button>
-            </form>
+            <h2>📝 किस काम के लिए बुकिंग करनी है?</h2>
+            <p style="font-size: 14px; color: #aaa; margin-bottom: 15px;">नीचे दिए गए ऑप्शन पर क्लिक करें, सीधा आपके WhatsApp पर मैसेज आ जाएगा:</p>
+            
+            <div class="whatsapp-options">
+                <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20अपनी%20बाइक%20की%20'जनरल%20सर्विस'%20करवानी%20है।" target="_blank" class="wa-opt-btn">
+                    🛠️ जनरल सर्विस करवानी है
+                </a>
+                <a href="https://wa.me/918130585587?text=नमस्कार,%20मेरी%20बाइक%20में%20'इंजन%20का%20काम'%20है।" target="_blank" class="wa-opt-btn">
+                    ⚙️ इंजन का काम करवाना है
+                </a>
+                <a href="https://wa.me/918130585587?text=नमस्कार,%20मेरी%20बाइक%20में%20'वायरिंग'%20की%20दिक्कत%20है।" target="_blank" class="wa-opt-btn">
+                    💡 वायरिंग की समस्या है
+                </a>
+                <a href="https://wa.me/918130585587?text=नमस्कार,%20मुझे%20'CYT%20LED%20बल्ब'%20लगवाना%20है।" target="_blank" class="wa-opt-btn">
+                    💡 CYT LED बल्ब लगवाना है (₹350)
+                </a>
+                <a href="https://wa.me/918130585587?text=नमस्कार,%20मेरी%20बाइक%20में%20अन्य%20दिक्कत%20है,%20बात%20करनी%20है।" target="_blank" class="wa-opt-btn">
+                    🔧 अन्य समस्या / पूछताछ के लिए
+                </a>
+            </div>
         </div>
 
         <div class="address-box">
@@ -249,34 +212,6 @@
     <footer>
         <p>© 2026 Meraj Bike Repairing Centre. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        function sendToWhatsApp(event) {
-            event.preventDefault();
-            
-            let name = document.getElementById('name').value;
-            let phone = document.getElementById('phone').value;
-            let bike = document.getElementById('bike-model').value;
-            let msg = document.getElementById('message').value;
-            
-            let checkboxes = document.querySelectorAll('input[name="service"]:checked');
-            let selectedServices = [];
-            checkboxes.forEach((cb) => {
-                selectedServices.push(cb.value);
-            });
-            
-            let serviceText = selectedServices.length > 0 ? selectedServices.join(', ') : 'कोई खास सर्विस नहीं चुनी';
-            
-            let whatsappNumber = "918130585587"; // आपका WhatsApp नंबर
-            
-            let text = `नमस्कार, मुझे अपनी बाइक की सर्विस करवानी है।\n\n*नाम:* ${name}\n*मोबाइल:* ${phone}\n*गाड़ी:* ${bike}\n*चयनित काम:* ${serviceText}\n*अन्य विवरण:* ${msg}`;
-            
-            let encodedText = encodeURIComponent(text);
-            let whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
-            
-            window.open(whatsappUrl, '_blank');
-        }
-    </script>
 
 </body>
     </html>
