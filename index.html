@@ -78,7 +78,6 @@
         .banner p { font-size: 11px; margin-bottom: 8px; opacity: 0.95; }
         .banner a { display: inline-block; background: white; color: #dc2743; padding: 5px 12px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 11px; }
 
-        /* 🛠️ नया अपडेटेड इमरजेंसी सपोर्ट बॉक्स */
         .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 10px; border-radius: 8px; margin-bottom: 12px; text-align: center; }
         .emergency-box h3 { color: #ff4d4d; font-size: 13px; margin-bottom: 5px; }
         .emergency-box p { font-size: 11px; margin-bottom: 8px; color: #ccc; }
@@ -147,7 +146,21 @@
         }
 
         .map-btn { display: inline-block; background: #2196f3; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 4px; font-size: 10px; }
-        .copyright { text-align: center; font-size: 10px; color: #777; margin-top: 8px; }
+        
+        /* 👁️ विजिटर काउंटर का डिज़ाइन */
+        .visitor-counter {
+            text-align: center;
+            background: #181818;
+            border: 1px dashed #444;
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            font-size: 11px;
+            color: #00ffcc;
+        }
+
+        .copyright { text-align: center; font-size: 10px; color: #777; margin-top: 6px; }
     </style>
 </head>
 <body>
@@ -168,7 +181,6 @@
             <a href="https://instagram.com/meraj_bike_mechanic" target="_blank">Instagram पर जुड़ें</a>
         </div>
 
-        <!-- 🛠️ यहाँ अपडेटेड "तत्काल सहायता (Emergency Support)" बॉक्स है -->
         <div class="emergency-box">
             <h3>🛠️ तत्काल सहायता (Emergency Support)</h3>
             <p>रास्ते में गाड़ी रुकने पर घबराएं नहीं, हमें डायरेक्ट कॉल करें या लोकेशन शेयर करें।</p>
@@ -290,10 +302,15 @@
             </div>
         </div>
 
+        <!-- 👁️ यहाँ विजिटर काउंटर जोड़ दिया गया है -->
+        <div class="visitor-counter">
+            📊 कुल विजिटर्स (Website Views): <img src="https://counter8.optinmonster.com/private/impressions/traffic?account=137452&domain=merajbikerepair.com" alt="visitor counter" style="display:none;" onerror="this.style.display='inline'; this.src='https://api.visitorbadge.io/api/combined?path=merajbikerepair&label=Visitors&countColor=%2300ffcc';" /> 
+        </div>
+
         <div class="copyright">
             © 2026 Meraj Bike Repairing Centre, All Rights Reserved.
         </div>
     </div>
 </body>
     </html>
-            
+    
