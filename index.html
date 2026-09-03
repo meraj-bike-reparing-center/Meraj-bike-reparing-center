@@ -10,9 +10,33 @@
         
         .container { max-width: 650px; margin: 0 auto; background: #1e1e1e; padding: 20px; border-radius: 8px; }
         
-        .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 15px; }
-        .header h1 { color: #ff4d4d; font-size: 22px; margin-bottom: 5px; }
-        .header p { color: #b0b0b0; font-size: 13px; }
+        /* 🛠️ सबसे ऊपर वाला हेडर हिस्सा - बाइक रिपेयरिंग थीम और स्टाइलिश बैकग्राउंड के साथ */
+        .header { 
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center; 
+            border: 2px solid #ff4d4d;
+            padding: 25px 15px; 
+            border-radius: 8px;
+            margin-bottom: 15px; 
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+        }
+        .header h1 { 
+            color: #ffd700; 
+            font-size: 24px; 
+            font-weight: bold;
+            margin-bottom: 6px; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+        }
+        .header p { 
+            color: #00ffcc; 
+            font-size: 13px; 
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
         
         /* 🕒 ऊपर का टाइम और एड्रेस बार - इंस्टाग्राम लुक */
         .info-bar { 
@@ -81,7 +105,7 @@
         .footer-box h3 { color: #ff4d4d; font-size: 12px; margin-bottom: 6px; }
         .footer-box.blue h3 { color: #2196f3; }
         
-        /* 📍 नीचे वाला वर्कशॉप का पता - अब इसे भी इंस्टाग्राम वाले लाल-नारंगी लुक में कर दिया गया है */
+        /* 📍 नीचे वाला वर्कशॉप का पता - इंस्टाग्राम लुक */
         .footer-box.address-highlight { 
             background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
             border: 1px solid #ff7675; 
@@ -107,7 +131,7 @@
     <div class="container">
         <div class="header">
             <h1>MERAJ BIKE REPAIRING CENTRE</h1>
-            <p>Expert Engine & Technical Repair Services</p>
+            <p>⚙️ Expert Engine & Technical Repair Services ⚙️</p>
         </div>
 
         <div class="info-bar">
@@ -219,4 +243,5 @@
         </div>
     </div>
 </body>
-</html>
+    </html>
+            
