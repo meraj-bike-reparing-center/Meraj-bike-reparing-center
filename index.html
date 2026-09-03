@@ -14,7 +14,7 @@
         .header h1 { color: #ff4d4d; font-size: 22px; margin-bottom: 5px; }
         .header p { color: #b0b0b0; font-size: 13px; }
         
-        /* 🕒 टाइम और एड्रेस वाले हिस्से को बड़ा, साफ़ और आकर्षक बनाया गया है */
+        /* ऊपर का टाइम और एड्रेस बार */
         .info-bar { 
             background: linear-gradient(135deg, #1f4037, #99f2c8); 
             color: #000; 
@@ -79,6 +79,24 @@
         .footer-box { flex: 1; min-width: 250px; background: #222; border: 1px solid #444; padding: 10px; border-radius: 8px; font-size: 11px; text-align: center; }
         .footer-box h3 { color: #ff4d4d; font-size: 12px; margin-bottom: 6px; }
         .footer-box.blue h3 { color: #2196f3; }
+        
+        /* 📍 नीचे वाले वर्कशॉप के पत्ते वाले हिस्से को बड़ा, बोल्ड और आकर्षक बनाया गया है */
+        .footer-box.address-highlight { 
+            background: linear-gradient(135deg, #2c3e50, #3498db); 
+            border: 1px solid #2980b9; 
+        }
+        .footer-box.address-highlight h3 { 
+            color: #fff; 
+            font-size: 13px; 
+            text-transform: uppercase;
+        }
+        .footer-box.address-highlight p { 
+            color: #f1c40f; 
+            font-size: 12px; 
+            font-weight: bold; 
+            margin-top: 4px; 
+        }
+
         .map-btn { display: inline-block; background: #2196f3; color: white; padding: 6px 10px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 6px; font-size: 11px; }
         .copyright { text-align: center; font-size: 10px; color: #777; margin-top: 10px; }
     </style>
@@ -188,9 +206,9 @@
                 <h3>दुकान की लाइव लोकेशन</h3>
                 <a href="Https://maps.app.goo.gl/v8RdFZXzSX3DGACE8?g_st=ac" target="_blank" class="map-btn">Google Maps पर नेविगेट करें</a>
             </div>
-            <div class="footer-box">
-                <h3>वर्कशॉप का पता</h3>
-                <p style="font-size: 10px; color: #ccc;">सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</p>
+            <div class="footer-box address-highlight">
+                <h3>📍 वर्कशॉप का पता</h3>
+                <p>सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</p>
             </div>
         </div>
 
@@ -199,4 +217,5 @@
         </div>
     </div>
 </body>
-</html>
+                                          </html>
+                                          
