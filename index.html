@@ -17,7 +17,6 @@
             min-height: 100vh;
         }
         
-        /* 💻 लैपटॉप और कंप्यूटर स्क्रीन के लिए परफेक्ट साइज और चौड़ाई सेट की गई है */
         .container { 
             width: 100%;
             max-width: 600px; 
@@ -27,7 +26,6 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
         
-        /* 🛠️ सबसे ऊपर वाला हेडर हिस्सा - बाइक रिपेयरिंग थीम और स्टाइलिश बैकग्राउंड के साथ */
         .header { 
             position: relative;
             background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80');
@@ -55,7 +53,6 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
         }
         
-        /* 🕒 ऊपर का टाइम और एड्रेस बार - इंस्टाग्राम लुक */
         .info-bar { 
             background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
             color: white; 
@@ -83,9 +80,12 @@
 
         .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: center; }
         .emergency-box h3 { color: #ff4d4d; font-size: 13px; margin-bottom: 8px; }
-        .btn-call, .btn-whatsapp { display: block; width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; text-align: center; }
+        
+        /* इमरजेंसी और लोकेशन वाले बटन्स */
+        .btn-call, .btn-whatsapp, .btn-loc { display: block; width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; text-align: center; cursor: pointer; border: none; }
         .btn-call { background: #d32f2f; color: white; }
         .btn-whatsapp { background: #388e3c; color: white; }
+        .btn-loc { background: #00acc1; color: white; }
 
         .grid-boxes { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
         .grid-box { flex: 1; min-width: 240px; background: #2a2415; border: 1px solid #ffc107; padding: 12px; border-radius: 8px; font-size: 11px; }
@@ -122,7 +122,6 @@
         .footer-box h3 { color: #ff4d4d; font-size: 12px; margin-bottom: 6px; }
         .footer-box.blue h3 { color: #2196f3; }
         
-        /* 📍 नीचे वाला वर्कशॉप का पता - इंस्टाग्राम लुक */
         .footer-box.address-highlight { 
             background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
             border: 1px solid #ff7675; 
@@ -166,7 +165,8 @@
             <h3>तुरंत क्या करें?</h3>
             <p style="font-size: 11px; margin-bottom: 8px; color: #ccc;">अपनी बाइक लोकेशन और समस्या सीधे WhatsApp पर भेजें या तुरंत कॉल करें।</p>
             <a href="tel:8130585587" class="btn-call">इमरजेंसी कॉल: 8130585587</a>
-            <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">WhatsApp पर लोकेशन भेजें</a>
+            <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">WhatsApp पर मैसेज भेजें</a>
+            <button onclick="sendLiveLocation()" class="btn-loc">📍 मेरी करंट लाइव लोकेशन भेजें</button>
         </div>
 
         <div class="grid-boxes">
@@ -242,6 +242,25 @@
                 var url = "https://api.whatsapp.com/send?phone=918130585587&text=" + encodeURIComponent(msg);
                 window.open(url, '_blank');
             }
+
+            // लाइव लोकेशन भेजने वाला फंक्शन
+            function sendLiveLocation() {
+                if (navigator.geolocation) {
+                    alert("कृपया लोकेशन एक्सेस (Allow) दें ताकि आपकी सही जगह मिल सके।");
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var lat = position.coords.latitude;
+                        var lon = position.coords.longitude;
+                        var mapsUrl = "https://www.google.com/maps?q=" + lat + "," + lon;
+                        var msg = "मेरी बाइक यहाँ खराब हुई है, मेरी लाइव लोकेशन यह है:\n" + mapsUrl;
+                        var whatsappUrl = "https://api.whatsapp.com/send?phone=918130585587&text=" + encodeURIComponent(msg);
+                        window.open(whatsappUrl, '_blank');
+                    }, function(error) {
+                        alert("लोकेशन प्राप्त नहीं हो सकी। कृपया अपने फोन का GPS ऑन करें।");
+                    });
+                } else {
+                    alert("आपका ब्राउज़र लोकेशन सपोर्ट नहीं करता है।");
+                }
+            }
         </script>
 
         <div class="footer-grid">
@@ -260,5 +279,5 @@
         </div>
     </div>
 </body>
-                    </html>
+    </html>
     
