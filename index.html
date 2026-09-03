@@ -81,7 +81,6 @@
         .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 12px; border-radius: 8px; margin-bottom: 15px; text-align: center; }
         .emergency-box h3 { color: #ff4d4d; font-size: 13px; margin-bottom: 8px; }
         
-        /* इमरजेंसी और लोकेशन वाले बटन्स */
         .btn-call, .btn-whatsapp, .btn-loc { display: block; width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 12px; text-align: center; cursor: pointer; border: none; }
         .btn-call { background: #d32f2f; color: white; }
         .btn-whatsapp { background: #388e3c; color: white; }
@@ -94,6 +93,13 @@
         .grid-box.green h3 { color: #4caf50; }
         .grid-box ul { padding-left: 12px; }
         .grid-box li { margin-bottom: 4px; }
+
+        /* 🛢️ इंजन ऑयल जानकारी वाला नया बॉक्स स्टाइल */
+        .oil-info-box { background: #1a242f; border: 1px solid #03a9f4; padding: 12px; border-radius: 8px; margin-bottom: 15px; font-size: 11px; }
+        .oil-info-box h3 { color: #03a9f4; font-size: 13px; margin-bottom: 8px; text-align: center; }
+        .oil-info-box p { margin-bottom: 6px; color: #d1e8ff; }
+        .oil-info-box ul { padding-left: 15px; margin-top: 5px; }
+        .oil-info-box li { margin-bottom: 4px; }
 
         .offer-box { background: #1a262c; border: 1px solid #00bcd4; padding: 12px; border-radius: 8px; margin-bottom: 15px; }
         .offer-box h3 { color: #00bcd4; font-size: 13px; margin-bottom: 8px; }
@@ -187,6 +193,16 @@
             </div>
         </div>
 
+        <!-- 🛢️ इंजन ऑयल ज्ञान वाला नया बॉक्स यहाँ जोड़ा गया है -->
+        <div class="oil-info-box">
+            <h3>⚙️ इंजन ऑयल (20W-40) का मतलब क्या है?</h3>
+            <p><strong>क्या आपने कभी सोचा है कि इंजन ऑयल पर ये नंबर क्यों लिखे होते हैं? जानिए तकनीकी सच:</strong></p>
+            <ul>
+                <li><strong>पहला नंबर (20W):</strong> यहाँ 'W' का मतलब Winter (सर्दी) है। यह ठंड या सुबह के समय इंजन को तुरंत स्टार्ट करने और ऑयल को हर हिस्से तक पहुँचाने में मदद करता है।</li>
+                <li><strong>दूसरा नंबर (40):</strong> जब बाइक लंबी दूरी तय करती है और इंजन बहुत ज्यादा गर्म हो जाता है, तब यह नंबर सुनिश्चित करता है कि ऑयल पानी की तरह पतला न पड़े और इंजन के पुर्जों को घिसने से बचाए।</li>
+            </ul>
+        </div>
+
         <div class="offer-box">
             <h3>विशेष ऑफर</h3>
             <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Bike Offer">
@@ -243,7 +259,6 @@
                 window.open(url, '_blank');
             }
 
-            // लाइव लोकेशन भेजने वाला फंक्शन
             function sendLiveLocation() {
                 if (navigator.geolocation) {
                     alert("कृपया लोकेशन एक्सेस (Allow) दें ताकि आपकी सही जगह मिल सके।");
@@ -279,5 +294,5 @@
         </div>
     </div>
 </body>
-    </html>
+                                                       </html>
     
