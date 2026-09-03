@@ -1,315 +1,356 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meraj Bike Mechanic</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        .main-container {
-            width: 100%;
-            max-width: 480px;
-            background-color: #161616;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #333;
-        }
-        /* हेडर बॉक्स */
-        .header-box {
-            border: 2px solid #ff4b2b;
-            text-align: center;
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            background: #1f1f1f;
-        }
-        .header-box h1 {
-            margin: 0;
-            font-size: 18px;
-            color: #ff4b2b;
-            letter-spacing: 1px;
-        }
-        .header-box p {
-            margin: 4px 0 0 0;
-            font-size: 11px;
-            color: #00e676;
-        }
-        /* 🔥 नया ऐप डाउनलोड बॉक्स */
-        .app-download-box {
-            background: linear-gradient(135deg, #ff416c, #ff4b2b);
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-            margin-bottom: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            border: 1px solid #ff7675;
-        }
-        .app-download-btn {
-            background-color: #ffffff;
-            color: #d63031;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: bold;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
-        /* रंग-बिरंगे बैनर्स और सेक्शन */
-        .banner-timing {
-            background: linear-gradient(90deg, #f12711, #f5af19);
-            padding: 10px;
-            text-align: center;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 13px;
-        }
-        .banner-views {
-            background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
-            padding: 10px;
-            text-align: center;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 13px;
-        }
-        .emergency-box {
-            background: #1f1f1f;
-            border: 1px solid #ff4b2b;
-            border-left: 4px solid #ff4b2b;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 12px;
-        }
-        .btn-red {
-            background-color: #d9534f;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-        .btn-green {
-            background-color: #5cb85c;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-        .btn-blue {
-            background-color: #337ab7;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-        .info-box {
-            background: #1f1f1f;
-            border: 1px solid #333;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            font-size: 12px;
-            line-height: 1.4;
-        }
-        .offer-box {
-            background: #1f1f1f;
-            border: 1px solid #337ab7;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        .offer-box img {
-            width: 100%;
-            max-height: 160px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin-top: 5px;
-        }
-        /* फॉर्म और इनपुट */
-        .form-box {
-            background: #1f1f1f;
-            border: 1px solid #337ab7;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .form-group {
-            margin-bottom: 8px;
-        }
-        .form-group input, .form-group select {
-            width: 100%;
-            padding: 9px;
-            background: #111;
-            border: 1px solid #444;
-            color: #fff;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 12px;
-        }
-        /* नीचे मैप और एड्रेस */
-        .bottom-action {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 10px;
-        }
-        .map-btn {
-            flex: 1;
-            background-color: #337ab7;
-            color: white;
-            text-align: center;
-            padding: 10px 4px;
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .address-btn {
-            flex: 1;
-            background: linear-gradient(90deg, #f12711, #f5af19);
-            color: white;
-            text-align: center;
-            padding: 10px 4px;
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraj Bike Repairing Centre</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.4;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 580px;
+            background: #1e1e1e;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+        
+        .header {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            border: 2px solid #ff4d4d;
+            padding: 18px 10px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 3px 12px rgba(255, 77, 77, 0.3);
+        }
+        .header h1 {
+            color: #ffd700;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+        }
+        .header p {
+            color: #00ffcc;
+            font-size: 11px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .app-download-box {
+            background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+            border: 2px solid #ffcc00;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(255, 204, 0, 0.2);
+        }
+        .app-download-box h3 {
+            color: #ffcc00;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        .app-download-box p {
+            font-size: 11px;
+            color: #ccc;
+            margin-bottom: 8px;
+        }
+        .btn-app-download {
+            display: block;
+            width: 100%;
+            background-color: #ff9800;
+            color: #000;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .info-bar {
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            color: white;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            border: 1px solid #ff7675;
+        }
+        .info-bar span {
+            display: block;
+            margin-top: 3px;
+            font-size: 11px;
+            color: #fff;
+            opacity: 0.95;
+        }
+        
+        .banner { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 12px; }
+        .banner h2 { font-size: 15px; margin-bottom: 4px; }
+        .banner p { font-size: 11px; margin-bottom: 8px; opacity: 0.95; }
+        .banner a { display: inline-block; background: white; color: #dc2743; padding: 5px 12px; border-radius: 20px; text-decoration: none; font-weight: bold; font-size: 11px; }
+
+        .emergency-box { background: #2c1a1a; border: 1px solid #ff4d4d; padding: 10px; border-radius: 8px; margin-bottom: 12px; text-align: center; }
+        .emergency-box h3 { color: #ff4d4d; font-size: 13px; margin-bottom: 5px; }
+        .emergency-box p { font-size: 11px; margin-bottom: 8px; color: #ccc; }
+        
+        .btn-call, .btn-whatsapp, .btn-loc { display: block; width: 100%; padding: 8px; margin-bottom: 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 11px; text-align: center; cursor: pointer; border: none; }
+        .btn-call { background: #d32f2f; color: white; }
+        .btn-whatsapp { background: #388e3c; color: white; }
+        .btn-loc { background: #00acc1; color: white; }
+
+        .grid-boxes { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+        .grid-box { flex: 1; min-width: 250px; background: #2a2415; border: 1px solid #ffc107; padding: 10px; border-radius: 8px; font-size: 11px; }
+        .grid-box h3 { color: #ffc107; font-size: 11px; margin-bottom: 5px; }
+        .grid-box.green { background: #152a1a; border-color: #4caf50; }
+        .grid-box.green h3 { color: #4caf50; }
+        .grid-box ul { padding-left: 12px; }
+        .grid-box li { margin-bottom: 3px; }
+
+        .oil-info-box { background: #1a242f; border: 1px solid #03a9f4; padding: 10px; border-radius: 8px; margin-bottom: 12px; font-size: 11px; }
+        .oil-info-box h3 { color: #03a9f4; font-size: 12px; margin-bottom: 6px; text-align: center; }
+        .oil-info-box p { margin-bottom: 4px; color: #d1e8ff; }
+        .oil-info-box ul { padding-left: 15px; margin-top: 3px; }
+        .oil-info-box li { margin-bottom: 3px; }
+
+        .offer-box { background: #1a262c; border: 1px solid #00bcd4; padding: 10px; border-radius: 8px; margin-bottom: 12px; }
+        .offer-box h3 { color: #00bcd4; font-size: 12px; margin-bottom: 6px; }
+        .offer-box img { width: 100%; max-height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 6px; }
+        .offer-box p { font-size: 11px; margin-bottom: 4px; }
+
+        .services-box { background: #222; border: 1px solid #444; padding: 10px; border-radius: 8px; margin-bottom: 12px; }
+        .services-box h3 { color: #ff9800; font-size: 12px; margin-bottom: 6px; }
+        .services-list { list-style: none; font-size: 11px; }
+        .services-list li { padding: 5px 0; border-bottom: 1px solid #333; display: flex; justify-content: space-between; flex-wrap: wrap; }
+        .services-list li:last-child { border-bottom: none; }
+        .services-list span { color: #ff9800; font-weight: bold; }
+
+        .reviews-box { background: #222; padding: 10px; border-radius: 8px; margin-bottom: 12px; font-size: 11px; }
+        .reviews-box h3 { color: #e91e63; font-size: 12px; margin-bottom: 6px; }
+        .review-item { background: #2a2a2a; padding: 6px; border-radius: 6px; margin-bottom: 6px; font-style: italic; }
+        .review-item span { display: block; font-style: normal; font-weight: bold; margin-top: 3px; color: #aaa; font-size: 10px; }
+
+        .booking-box { background: #1a2332; border: 1px solid #2196f3; padding: 10px; border-radius: 8px; margin-bottom: 12px; }
+        .booking-box h3 { color: #2196f3; font-size: 12px; margin-bottom: 6px; }
+        .booking-form input, .booking-form select, .booking-form textarea { width: 100%; padding: 7px; margin-bottom: 6px; background: #222; border: 1px solid #444; color: white; border-radius: 6px; font-size: 11px; }
+        .booking-form button { width: 100%; padding: 8px; background: #2196f3; color: white; border: none; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 11px; }
+
+        .footer-grid { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+        .footer-box { flex: 1; min-width: 250px; background: #222; border: 1px solid #444; padding: 8px; border-radius: 8px; font-size: 11px; text-align: center; }
+        .footer-box h3 { color: #ff4d4d; font-size: 11px; margin-bottom: 5px; }
+        .footer-box.blue h3 { color: #2196f3; }
+        
+        .footer-box.address-highlight {
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border: 1px solid #ff7675;
+        }
+        .footer-box.address-highlight h3 {
+            color: #fff;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        .footer-box.address-highlight p {
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            margin-top: 3px;
+            opacity: 0.95;
+        }
+
+        .map-btn { display: inline-block; background: #2196f3; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 4px; font-size: 10px; }
+        
+        .visitor-counter {
+            text-align: center;
+            background: #181818;
+            border: 1px dashed #444;
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            font-size: 11px;
+            color: #00ffcc;
+        }
+
+        .copyright { text-align: center; font-size: 10px; color: #777; margin-top: 6px; }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>MERAJ BIKE REPAIRING CENTRE</h1>
+            <p>⚙️ Expert Engine & Technical Repair Services ⚙️</p>
+        </div>
 
-<div class="main-container">
+        <div class="app-download-box">
+            <h3>📱 Meraj Bike Repairing Center App</h3>
+            <p>गाड़ी की ऑनलाइन बुकिंग और तुरंत सहायता के लिए हमारा ऑफिशियल एंड्रॉइड ऐप डाउनलोड करें।</p>
+            <a href="app-release.apk" class="btn-app-download" download>
+                📥 ऐप डाउनलोड करें (Install APK)
+            </a>
+        </div>
 
-    <!-- 1. ऑरिजिनल हेडर -->
-    <div class="header-box">
-        <h1>MERAJ BIKE REPAIRING CENTRE</h1>
-        <p>🟢 Expert Engine & Technical Repair Services 🟢</p>
-    </div>
+        <div class="info-bar">
+            🕒 सुबह 7 से शाम 7 (सातों दिन खुली)
+            <span>📍 सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</span>
+        </div>
 
-    <!-- 🔥 2. नया ऐप डाउनलोड सिस्टम (यहाँ अपनी APK फाइल का असली डायरेक्ट लिंक डालें) -->
-    <div class="app-download-box">
-        <h3 style="margin: 0 0 3px 0; font-size: 15px; color: #fff;">Meraj Bike Mechanic Official App</h3>
-        <p style="margin: 0 0 8px 0; font-size: 11px; color: #fdfdfd;">ऐप डाउनलोड करें और डायरेक्ट बुकिंग करें!</p>
-        <a href="APKA_GITHUB_YA_DIRECT_LINK_YAHAN_DALEN.apk" class="app-download-btn" download>
-            📥 Download App (APK)
-        </a>
-    </div>
+        <div class="banner">
+            <h2>7.6M+ Views in Last 30 Days</h2>
+            <p>हमारे टेक्निकल रील्स और रिपेयरिंग वीडियोज़ को इंस्टाग्राम पर भारी सफलता मिली है।</p>
+            <a href="https://instagram.com/meraj_bike_mechanic" target="_blank">Instagram पर जुड़ें</a>
+        </div>
 
-    <!-- 3. टाइमिंग बैनर -->
-    <div class="banner-timing">
-        🕒 सुबह 7 से शाम 7 (सातों दिन खुली)
-    </div>
+        <div class="emergency-box">
+            <h3>🛠️ तत्काल सहायता (Emergency Support)</h3>
+            <p>रास्ते में गाड़ी रुकने पर घबराएं नहीं, हमें डायरेक्ट कॉल करें या लोकेशन शेयर करें।</p>
+            <a href="tel:8130585587" class="btn-call">इमरजेंसी कॉल: 8130585587</a>
+            <a href="https://wa.me/918130585587?text=Hello%20Meraj%20Bike%20Mechanic,%20mujhe%20madad%20chahiye" class="btn-whatsapp" target="_blank">WhatsApp पर मैसेज भेजें</a>
+            <button onclick="sendLiveLocation()" class="btn-loc">📍 मेरी करंट लाइव लोकेशन भेजें</button>
+        </div>
 
-    <!-- 4. व्यूज बैनर -->
-    <div class="banner-views">
-        🚀 7.6M+ Views in Last 30 Days
-    </div>
+        <div class="grid-boxes">
+            <div class="grid-box">
+                <h3>इंजन काम के विशेष नियम</h3>
+                <ul>
+                    <li><strong>शुरुआती 500 KM:</strong> गाड़ी हमेशा सिंगल सवारी चलाएं और ज्यादा रेस न दें।</li>
+                    <li><strong>मोबिल बदलाव:</strong> ठीक 500 KM पर दुकान पर आकर इंजन ओइल बदलवाना अनिवार्य है।</li>
+                    <li>नियम न मानने पर धुआं देने या इंजन सीज होने पर जिम्मेदारी दुकान की नहीं होगी।</li>
+                </ul>
+            </div>
+            <div class="grid-box green">
+                <h3>ओरिजिनल पार्ट्स एवं फिटिंग नियम</h3>
+                <ul>
+                    <li>हम Hero और अन्य कंपनियों के 100% ओरिजिनल पार्ट्स उपलब्ध कराते हैं।</li>
+                    <li>ओरिजिनल पार्ट्स लगवाने पर एमआरपी मूल्य से ₹100 से ₹150 एक्स्ट्रा फिटिंग चार्ज लगेगा।</li>
+                </ul>
+            </div>
+        </div>
 
-    <!-- 5. इमरजेंसी सपोर्ट -->
-    <div class="emergency-box">
-        <strong>🛠️ आपात सहायता (Emergency Support)</strong><br>
-        रस्ते में गाड़ी ख़राब हो जाने पर कॉल करें। तुरंत मौके पर पहुँचकर मदद की जाएगी।
-    </div>
+        <div class="oil-info-box">
+            <h3>⚙️ इंजन ऑयल (20W-40) का तकनीकी सच</h3>
+            <p><strong>क्या आप जानते हैं इस नंबर का मतलब?</strong></p>
+            <ul>
+                <li><strong>पहला नंबर (20W - Winter):</strong> ठंड या सुबह के समय इंजन को तुरंत स्टार्ट करने और ऑयल को हर हिस्से तक पहुँचाने में मदद करता है।</li>
+                <li><strong>दूसरा नंबर (40):</strong> लंबी दूरी और गर्मी में इंजन गर्म होने पर भी ऑयल को पानी की तरह पतला नहीं होने देता, जिससे पुर्जे घिसते नहीं हैं।</li>
+            </ul>
+        </div>
 
-    <!-- कॉलिंग और व्हाट्सएप बटन -->
-    <a href="tel:8130565587" class="btn-red">इमरजेंसी कॉलिंग: 8130565587</a>
-    <a href="https://wa.me/918130565587" class="btn-green">WhatsApp पर मैसेज भेजें</a>
-    <a href="#" class="btn-blue">मेरी मोटर साइकिल लोकेशन भेजें</a>
+        <div class="offer-box">
+            <h3>विशेष ऑफर</h3>
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Bike Offer">
+            <p><strong>CYT LED High Quality Bulb:</strong> बाहर ₹500, यहाँ मात्र ₹350 में (फिटिंग के साथ)।</p>
+        </div>
 
-    <!-- 6. इंजन ऑयल की जानकारी (जो छूट गई थी) -->
-    <div class="info-box">
-        <strong>🛢️ इंजन ऑयल (20W-40) का सर्वश्रेष्ठ लाभ</strong>
-        <p style="margin: 4px 0 0 0; color: #aaa; font-size: 11px;">
-            • माइलेज बढ़ाए: 800 KM के बाद भी इंजन मक्खन जैसी आवाज़ देगा。<br>
-            • मोबिल कसम: 3000 KM पर इंजन पर लोड डलना बिल्कुल बंद हो जाएगा।
-        </p>
-    </div>
+        <div class="services-box">
+            <h3>हमारी मुख्य सेवाएँ</h3>
+            <ul class="services-list">
+                <li><span>सर्विसिंग और ट्यूनिंग</span> ऑयल चेंज, कार्बोरेटर सफाई</li>
+                <li><span>इंजन रिपेयरिंग</span> बोर, क्लच और फुल इंजन काम</li>
+                <li><span>वायरिंग और इलेक्ट्रिकल</span> सेल्फ मोटर, लाइट व वायरिंग</li>
+                <li><span>टायर और ब्रेक सर्विस</span> ब्रेक शू, डिस्क पैड व टायर चेंज</li>
+            </ul>
+        </div>
 
-    <!-- 7. स्पेशल ऑफर और बाइक फोटो -->
-    <div class="offer-box">
-        <span style="font-size: 12px; color: #ff4b2b; font-weight: bold;">विशेष ऑफर</span>
-        <!-- यहाँ अपनी बाइक या एलईडी बल्ब की तस्वीर लगा सकते हैं -->
-        <img src="bike.jpg" alt="Bike Offer" onerror="this.style.display='none'">
-        <p style="font-size: 11px; margin: 5px 0 0 0; color: #ccc;">CYT LED High-Quality Bulb: मात्र ₹500, यहाँ ₹560 में (फिटिंग के साथ)</p>
-    </div>
+        <div class="reviews-box">
+            <h3>ग्राहकों के अनुभव</h3>
+            <div class="review-item">
+                "मेरज भाई ने मेरी पल्सर का इंजन ऐसा बना दिया कि मजा आ गया! काम एकदम पक्का।"
+                <span>— राहुल कुमार</span>
+            </div>
+        </div>
 
-    <!-- 8. ग्राहकों के अनुभव (Reviews) -->
-    <div class="info-box" style="border-left: 4px solid #f5af19;">
-        <span style="color: #f5af19; font-weight: bold;">ग्राहकों के अनुभव</span>
-        <p style="margin: 4px 0 0 0; font-style: italic; color: #ccc; font-size: 11px;">
-            "मेरा भाई ने मेरी गाड़ी का इंजन ऐसा सेट किया कि यार काम एकदम मक्खन!"<br>
-            <span style="color: #888; font-size: 10px;">— राहुल कुमार</span>
-        </p>
-    </div>
+        <div class="booking-box">
+            <h3>ऑनलाइन सर्विस बुकिंग फॉर्म</h3>
+            <form class="booking-form" onsubmit="sendToWhatsApp(event)">
+                <input type="text" id="custName" placeholder="आपका नाम (पूरा नाम लिखें)" required>
+                <input type="tel" id="custPhone" placeholder="मोबाइल नंबर लिखें" required>
+                <input type="text" id="bikeModel" placeholder="गाड़ी का नाम (जैसे Splendor, Pulsar)" required>
+                <select id="workType" required>
+                    <option value="">-- समस्या / काम चुनें --</option>
+                    <option value="सर्विसिंग">सर्विसिंग</option>
+                    <option value="इंजन काम">इंजन काम</option>
+                    <option value="अन्य समस्या">अन्य समस्या</option>
+                </select>
+                <textarea id="custDetails" rows="2" placeholder="अन्य विवरण..."></textarea>
+                <button type="submit">WhatsApp पर बुकिंग भेजें</button>
+            </form>
+        </div>
 
-    <!-- 9. ऑनलाइन सर्विस बुकिंग फॉर्म -->
-    <div class="form-box">
-        <strong style="color: #337ab7; font-size: 12px;">ऑनलाइन सर्विस बुकिंग फॉर्म</strong>
-        <form style="margin-top: 8px;">
-            <div class="form-group">
-                <input type="text" placeholder="आपका नाम (Full Name)">
-            </div>
-            <div class="form-group">
-                <input type="text" placeholder="गाड़ी का नंबर (Bike Number)">
-            </div>
-            <div class="form-group">
-                <input type="text" placeholder="मोबाइल नंबर (Mobile Number)">
-            </div>
-            <div class="form-group">
-                <select>
-                    <option>-- समस्या / काम चुनें --</option>
-                    <option>इंजन रिपेयर</option>
-                    <option>ऑयल चेंज</option>
-                    <option>कम्पलीट सर्विस</option>
-                </select>
-            </div>
-            <a href="#" class="btn-blue" style="margin-bottom: 0; text-align: center;">WhatsApp पर बुकिंग भेजें</a>
-        </form>
-    </div>
+        <script>
+            function sendToWhatsApp(event) {
+                event.preventDefault();
+                var name = document.getElementById('custName').value;
+                var phone = document.getElementById('custPhone').value;
+                var bike = document.getElementById('bikeModel').value;
+                var work = document.getElementById('workType').value;
+                var details = document.getElementById('custDetails').value;
+                if (!details) { details = "लागू नहीं"; }
 
-    <!-- 10. मैप और एड्रेस बटन -->
-    <div class="bottom-action">
-        <a href="https://maps.google.com" target="_blank" class="map-btn">
-            📍 Google Map पर लोकेशन देखें
-        </a>
-        <a href="#" class="address-btn">
-            📍 दुकान का पता (Address)
-        </a>
-    </div>
+                var msg = "नई सर्विस बुकिंग\n\nनाम: " + name + "\nमोबाइल: " + phone + "\nगाड़ी: " + bike + "\nकाम: " + work + "\nविवरण: " + details;
+                var url = "https://api.whatsapp.com/send?phone=918130585587&text=" + encodeURIComponent(msg);
+                window.open(url, '_blank');
+            }
 
-    <!-- फुटर -->
-    <div style="text-align: center; font-size: 10px; color: #666; margin-top: 15px;">
-        © 2026 Meraj Bike Mechanic. All Rights Reserved.
-    </div>
+            function sendLiveLocation() {
+                if (navigator.geolocation) {
+                    alert("कृपया लोकेशन एक्सेस (Allow) दें ताकि आपकी सही जगह मिल सके।");
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var lat = position.coords.latitude;
+                        var lon = position.coords.longitude;
+                        var mapsUrl = "https://www.google.com/maps?q=" + lat + "," + lon;
+                        var msg = "मेरी बाइक यहाँ खराब हुई है, मेरी लाइव लोकेशन यह है:\n" + mapsUrl;
+                        var whatsappUrl = "https://api.whatsapp.com/send?phone=918130585587&text=" + encodeURIComponent(msg);
+                        window.open(whatsappUrl, '_blank');
+                    }, function(error) {
+                        alert("लोकेशन प्राप्त नहीं हो सकी। कृपया अपने फोन का GPS ऑन करें।");
+                    });
+                } else {
+                    alert("आपका ब्राउज़र लोकेशन सपोर्ट नहीं करता है।");
+                }
+            }
+        </script>
 
-</div>
+        <div class="footer-grid">
+            <div class="footer-box blue">
+                <h3>दुकान की लाइव लोकेशन</h3>
+                <a href="Https://maps.app.goo.gl/v8RdFZXzSX3DGACE8?g_st=ac" target="_blank" class="map-btn">Google Maps पर नेविगेट करें</a>
+            </div>
+            <div class="footer-box address-highlight">
+                <h3>📍 वर्कशॉप का पता</h3>
+                <p>सरायरंजन रोड, परोरिया झरुल्ला स्थान - 848114</p>
+            </div>
+        </div>
 
+        <div class="visitor-counter">
+            📊 कुल विजिटर्स (Website Views): <img src="https://counter8.optinmonster.com/private/impressions/traffic?account=137452&domain=merajbikerepair.com" alt="visitor counter" style="display:none;" onerror="this.style.display='inline'; this.src='https://api.visitorbadge.io/api/combined?path=merajbikerepair&label=Visitors&countColor=%2300ffcc';" />
+        </div>
+
+        <div class="copyright">
+            © 2026 Meraj Bike Repairing Centre, All Rights Reserved.
+        </div>
+    </div>
 </body>
 </html>
